@@ -1,0 +1,15 @@
+<%= form_tag :controller => "languages", :action => "select", :method => 'post' do %>
+  <h1>Onestop Learning</h1>
+  <p> Please select the language!!!</p>
+  
+  <div class="field">
+    <!-- <label for="select">Language</label> -->
+    <label>Language</label>
+    <%= collection_select :language, :Langopt_id, Langopt.all, :id, :name %>
+  </div>
+ 
+  <div class="actions">
+    <%= submit_tag("Search") %>
+  </div>
+
+<% end %>

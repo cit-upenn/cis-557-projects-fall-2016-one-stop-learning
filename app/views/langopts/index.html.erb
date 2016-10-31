@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Langopts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @langopts.each do |langopt| %>
+      <tr>
+        <td><%= langopt.name %></td>
+        <td><%= link_to 'Show', langopt %></td>
+        <td><%= link_to 'Edit', edit_langopt_path(langopt) %></td>
+        <td><%= link_to 'Destroy', langopt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Langopt', new_langopt_path %>

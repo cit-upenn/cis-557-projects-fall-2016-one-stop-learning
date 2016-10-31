@@ -1,0 +1,1 @@
+json.partial! "langopts/langopt", langopt: @langopt

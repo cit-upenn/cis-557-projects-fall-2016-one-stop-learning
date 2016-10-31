@@ -1,0 +1,2 @@
+class CppController < ApplicationController
+end

@@ -1,0 +1,1 @@
+json.array! @langopts, partial: 'langopts/langopt', as: :langopt

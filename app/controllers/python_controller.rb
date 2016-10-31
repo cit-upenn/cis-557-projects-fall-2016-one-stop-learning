@@ -1,0 +1,2 @@
+class PythonController < ApplicationController
+end

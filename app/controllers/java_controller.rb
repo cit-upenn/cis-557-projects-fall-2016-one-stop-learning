@@ -1,0 +1,2 @@
+class JavaController < ApplicationController
+end
