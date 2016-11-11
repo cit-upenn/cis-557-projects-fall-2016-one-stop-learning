@@ -1,4 +1,9 @@
 class LanguagesController < ApplicationController
+	before_action :authenticate_user!
+
+	# def index
+	# end
+
 	def select
 		# render plain: params[:language][:Langopt_id].inspect
 				

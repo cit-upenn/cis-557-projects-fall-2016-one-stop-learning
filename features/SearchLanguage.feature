@@ -6,7 +6,8 @@ Feature: Display Language
   
   
   Scenario: Select language
-    Given I'm on the display page
+  	Given all the languages have been added
+    And I'm on the display page
     When I click on the drop-down
     Then I should be able to see all the languages and select one
     
