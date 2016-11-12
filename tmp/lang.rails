@@ -1,0 +1,13 @@
+<%= form_for Language.new, :url => { :controller => "languages", :action => "page_redirect", :method=>'post' } do |f| %>
+  <p> Please select the language!!!</p>
+  
+  <div class="field">
+    <%= f.label :Langopt_id, "Language"  %>
+    <%= collection_select :language, :Langopt_id, Langopt.all, :id, :name %>
+  </div>
+ 
+  <div class="actions">
+    <%= f.submit "Search" %>
+  </div>
+
+<% end %>
