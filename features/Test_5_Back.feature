@@ -6,6 +6,6 @@ Feature: Go back to Main Page
   
   
   Scenario: Click on Back Button
-    Given I'm on the Ruby page
+    Given I'm on the Language page
     When I click on the Back button
     Then I should be able to see the Main Page
