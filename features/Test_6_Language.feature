@@ -5,13 +5,11 @@ Feature: View video tutorial and documentation
   I want to select the link
   
   
-  Scenario: Select video link
+  Scenario: Select video/doc link
     Given I'm on the Ruby page
     When I click on a video link
     Then I should be able to see the video tutorial
 
-  Scenario: Select Documentation link
-    Given I'm on the Ruby page
     When I click on the documentation link
     Then I should be able to see the documentation
     
