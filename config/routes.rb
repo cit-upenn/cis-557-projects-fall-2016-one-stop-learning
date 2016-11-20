@@ -38,10 +38,12 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :langopts
-  resources :comments, only: [:index, :new, :create]
+  resources :comments, only: [:index, :create]
+  get '/comments/new/(:parent_id)', to: 'comments#new', as: :new_comment
+
   
   
- root 'languages#index' 
+  root 'languages#index' 
   # match 'page_redirect' => 'languages#page_redirect', :as =>'page_redirect',:via => [:post]
   get 'languages/cpp' => 'cpp#index'
   get 'languages/java' => 'java#index'
@@ -54,6 +56,7 @@ Rails.application.routes.draw do
   get 'comments/index'
   get 'comments/new'
   get 'comments/create'
+  
 
 
   # devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
