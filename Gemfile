@@ -31,6 +31,7 @@ gem 'devise', '~> 3.4'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'certified'
+gem 'closure_tree'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

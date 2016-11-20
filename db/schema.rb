@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161112210624) do
+ActiveRecord::Schema.define(version: 20161120144008) do
+
+  create_table "comment_hierarchies", force: :cascade do |t|
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "title"
+    t.string   "author"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "parent_id"
+  end
 
   create_table "favorites", force: :cascade do |t|
     t.string   "url"

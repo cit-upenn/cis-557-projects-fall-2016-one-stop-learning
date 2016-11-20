@@ -34,9 +34,11 @@
 
 
 Rails.application.routes.draw do
+ 
+
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :langopts
-  
+  resources :comments, only: [:index, :new, :create]
   
   
  root 'languages#index' 
@@ -48,6 +50,11 @@ Rails.application.routes.draw do
   get 'languages' => 'languages#index'
   get '/users/omniauth_callbacks' => 'user#facebook'
   post 'languages' => 'languages#select'
+
+  get 'comments/index'
+  get 'comments/new'
+  get 'comments/create'
+
 
   # devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
