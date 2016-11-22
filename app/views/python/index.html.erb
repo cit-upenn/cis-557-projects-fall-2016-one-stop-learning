@@ -1,40 +1,31 @@
 <!DOCTYPE html>
 <head>
-	<title>Python</title>
+  <title>Python</title>
 </head>
 <body>
-	<h1>Onestop Learning</h1>
-	<h2>Python</h2>
-	<h3>Video Tutorials</h3>
-	<ul>
-		<li> <h4>By Derek Banas</h4>
-			<iframe width="600" height="400"
-				src="https://www.youtube.com/embed/N4mEzFDjqtA?controls=1">
-			</iframe>
-			<p><b>Description</b></p>
-			<p>This video covers modules, comments, print, arithmetic operators, order of operation, lists, tuples, dictionaries, conditional operators, logical operators, if, else, elif, loops, for, while, break, continue, functions, return, readline(), string operators, file i/o, classes, objects and much more.</p>
-		</li>
-		<li> <h4>By onestopprogramming</h4>
-			<iframe width="600" height="400"
-				src="https://www.youtube.com/embed/cpPG0bKHYKc?controls=1">
-			</iframe>
-			<p><b>Description</b></p>
-			<p>This Python Programming Tutorial covers the instillation python and setting up the python development environment. This video covers setting up a system variable for using python from the windows command prompt and also covers using python from the built in IDLE IDE. After setting up the development an environment this video demonstrates how to create and run your first python script (Hello World).
+<p id="notice"><%= notice %></p>
+<h1>Onestop Learning</h1>
+<h2>Python</h2>
+<h3>Video Tutorials</h3>
+<ul>
+    <% @favorites.each do |f| %>
+      <li> <h4>Some Heading</h4>
+      <span>
+        <%= button_to "favorite",   languages_python_path(id: f.id , type: "favorite"), method: :post %>
+        <%= button_to "unfavorite", languages_python_path(id: f.id , type: "unfavorite"), method: :post %>
+      </span>
+      <iframe width="600" height="400"
+        src= <%=f.url %> >
+      </iframe>
+      <p><b>Description</b></p>
+      <p><%= f.description %></p>
+    </li>
+   <% end %>
+</ul>
+<h3>Official Documentation</h3>
+  <a id = "doc" href = "https://docs.python.org/3/">Documentation</a>
 
-			This video series is ideal for individuals looking to learn their first programming language or individuals looking to learn python as another programming language. </p>
-		</li>
-		<li> <h4>By thenewboston</h4>
-			<iframe width="600" height="400"
-				src="https://www.youtube.com/embed/4Mf0h3HphEA?controls=1">
-			</iframe>
-			<p><b>Description</b></p>
-			<p> This series assumes zero prior knowledge of programming and will leave you with a firm grasp of the language. The instructor strikes a really great balance between being funny while also being easy to listen.</p>
-		</li>
-	</ul>
-	<h3>Official Documentation</h3>
-	<a id = "doc" href = "https://docs.python.org/3/">Documentation</a>
-
-	<div class = "Back">
-		<%= link_to 'Back', languages_path %>
-	</div>
+  <div class = "Back">
+    <%= link_to 'Back', languages_path %>
+  </div>
 </body>

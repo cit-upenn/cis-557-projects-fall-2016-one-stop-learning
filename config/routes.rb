@@ -31,6 +31,7 @@
 #           languages_java GET      /languages/java(.:format)              java#index
 #           languages_ruby GET      /languages/ruby(.:format)              ruby#index
 #         languages_python GET      /languages/python(.:format)            python#index
+#                          POST     /languages/python(.:format)            python#favorite
 #                languages GET      /languages(.:format)                   languages#index
 # users_omniauth_callbacks GET      /users/omniauth_callbacks(.:format)    user#facebook
 #                          POST     /languages(.:format)                   languages#select
@@ -83,6 +84,7 @@ Rails.application.routes.draw do
   get 'languages/java' => 'java#index'
   get 'languages/ruby' => 'ruby#index'
   get 'languages/python' => 'python#index'
+  post 'languages/python' => 'python#favorite'
   get 'languages' => 'languages#index'
   get '/users/omniauth_callbacks' => 'user#facebook'
   post 'languages' => 'languages#select'
