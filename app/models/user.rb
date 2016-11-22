@@ -28,6 +28,7 @@ class User < ActiveRecord::Base
   
   has_many :note
   has_many :favorite
+  has_many :user_favorite
 
   
   def self.from_omniauth(auth)

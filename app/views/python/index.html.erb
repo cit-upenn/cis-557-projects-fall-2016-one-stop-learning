@@ -11,8 +11,8 @@
     <% @favorites.each do |f| %>
       <li> <h4>By <%= f.owner%></h4>
       <span>
-        <%= button_to "favorite",   languages_python_path(id: f.id , type: "favorite"), method: :post %>
-        <%= button_to "unfavorite", languages_python_path(id: f.id , type: "unfavorite"), method: :post %>
+        <%= button_to "favorite",   languages_python_path(url: f.url, owner: f.owner, lang: f.language , type: "favorite"), method: :post %>
+        <%= button_to "unfavorite", languages_python_path(url: f.url, owner: f.owner, lang: f.language , type: "unfavorite"), method: :post %>
       </span>
       <iframe width="400" height="300"
         src= <%=f.url %> >
