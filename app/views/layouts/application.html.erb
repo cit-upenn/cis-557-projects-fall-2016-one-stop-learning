@@ -5,10 +5,38 @@
   <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <style type="text/css">
+    
+    div.container {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    border: 1px solid blue;
+}
+  </style>
 </head>
 <body>
 
 <%= yield %>
-
+<div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="well sidebar-nav">
+            <h3>Sidebar</h3>
+            <ul class="nav nav-list">
+              <li class="nav-header">Sidebar</li>
+              <li><%= link_to "Link1", "/path1"  %></li>
+              <li><%= link_to "Link2", "/path2"  %></li>
+              <li><%= link_to "Link3", "/path3"  %></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+      </div><!--/row-->
+</div> <!-- /container -->
+<footer>
+        <p>&copy; Company 2016</p>
+</footer>
 </body>
 </html>

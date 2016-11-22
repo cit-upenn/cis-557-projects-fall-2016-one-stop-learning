@@ -9,6 +9,7 @@
 #  updated_at  :datetime         not null
 #  description :string
 #  language    :string
+#  owner       :string
 #
 
 require 'test_helper'

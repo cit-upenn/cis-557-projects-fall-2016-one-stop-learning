@@ -1,39 +1,31 @@
 <!DOCTYPE html>
 <head>
-	<title>C++</title>
+  <title>C++</title>
 </head>
 <body>
- 	<h1>Onestop Learning</h1>
-	<h2>C++</h2>
-	<h3>Video Tutorial</h3>
-	<ul>
-		<li> <h4>By Derek Banas</h4>
-			<iframe width="600" height="400"
-				src="https://www.youtube.com/embed/Rub-JsjMhWY?controls=1">
-			</iframe>
-			<p><b>Description</b></p>
-			<p>This video is a great refresher course and covers datatypes, arithmetic operations, if statement, switch statement, ternary operator, arrays, for loop, while loop, do while loop, how to obtain user input, strings, vectors, functions, recursive functions, exception handling, pointers, reference operator, classes / objects, static variables and functions, constructors, inheritance, virtual methods, polymorphism and abstract data type.</p>
-		</li>
-		<li> <h4>By Programming Tutorials</h4>
-			<iframe width="600" height="400"
-				src="https://www.youtube.com/embed/S3t-5UtvDN0?controls=1">
-			</iframe>
-			<p><b>Description</b></p>
-			<p>This video series is ideal for beginners looking to learn C++ as it assumes zero prior knowledge of programming. </p>
-		</li>
-		<li> <h4>By anurag verma</h4>
-			<iframe width="600" height="400"
-				src="https://www.youtube.com/embed/-WwGMNGRHdw?controls=1">
-			</iframe>
-			<p><b>Description</b></p>
-			<p> This series covers the fundamentals of C++. Has great content and goes at an appropriate pace such that all the views irrespective of their background can follow it easily.</p>
-		</li>
-	</ul>
-	
-	<h3>Official Documentation</h3>
-	<a id = "doc" href = "http://devdocs.io/cpp/">Documentation</a>
+<p id="notice"><%= notice %></p>
+<h1>Onestop Learning</h1>
+<h2>C++</h2>
+<h3>Video Tutorials</h3>
+<ul>
+    <% @favorites.each do |f| %>
+      <li> <h4>By <%= f.owner %></h4>
+      <span>
+        <%= button_to "favorite",   languages_cpp_path(id: f.id , type: "favorite"), method: :post %>
+        <%= button_to "unfavorite", languages_cpp_path(id: f.id , type: "unfavorite"), method: :post %>
+      </span>
+      <iframe width="400" height="300"
+        src= <%=f.url %> >
+      </iframe>
+      <p><b>Description</b></p>
+      <p><%= f.description %></p>
+    </li>
+   <% end %>
+</ul>
+<h3>Official Documentation</h3>
+  <a id = "doc" href = "http://devdocs.io/cpp/">Documentation</a>
 
-	<div class = "Back">
-		<%= link_to 'Back', languages_path %>
-	</div>
+  <div class = "Back">
+    <%= link_to 'Back', languages_path %>
+  </div>
 </body>
