@@ -24,7 +24,7 @@
 <% if user_signed_in? %>
 	<div class="container">
 
-        <h3>Favorites</h3>
+        <h3>Favorites : <%= @count %></h3>
         <ul class="nav nav-list">
           <% if @count != 0 %>
             <% @links.each do |f| %>

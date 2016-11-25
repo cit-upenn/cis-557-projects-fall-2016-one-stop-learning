@@ -31,10 +31,13 @@
 #           languages_java GET      /languages/java(.:format)              java#index
 #           languages_ruby GET      /languages/ruby(.:format)              ruby#index
 #         languages_python GET      /languages/python(.:format)            python#index
-#                          POST     /languages/python(.:format)            python#favorite
 #                languages GET      /languages(.:format)                   languages#index
 # users_omniauth_callbacks GET      /users/omniauth_callbacks(.:format)    user#facebook
 #                          POST     /languages(.:format)                   languages#select
+#                          POST     /languages/python(.:format)            python#favorite
+#                          POST     /languages/ruby(.:format)              ruby#favorite
+#                          POST     /languages/java(.:format)              java#favorite
+#                          POST     /languages/cpp(.:format)               cpp#favorite
 #
 
 #         new_user_session GET      /users/sign_in(.:format)               devise/sessions#new
@@ -78,16 +81,23 @@ Rails.application.routes.draw do
   
   
   
- root 'languages#index' 
+  root 'languages#index' 
+  get 'languages' => 'languages#index'
   # match 'page_redirect' => 'languages#page_redirect', :as =>'page_redirect',:via => [:post]
   get 'languages/cpp' => 'cpp#index'
   get 'languages/java' => 'java#index'
   get 'languages/ruby' => 'ruby#index'
   get 'languages/python' => 'python#index'
-  post 'languages/python' => 'python#favorite'
-  get 'languages' => 'languages#index'
+
+  
   get '/users/omniauth_callbacks' => 'user#facebook'
   post 'languages' => 'languages#select'
+
+  # Routes to handle favorite links.
+  post 'languages/python' => 'python#favorite'
+  post 'languages/ruby' => 'ruby#favorite'
+  post 'languages/java' => 'java#favorite'
+  post 'languages/cpp' => 'cpp#favorite'
 
   # devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
