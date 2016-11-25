@@ -32,7 +32,8 @@
 	<h3>Official Documentation</h3>
 	<a id = "doc" href = "https://docs.oracle.com/javase/8/">Documentation</a>
 
-	<div class = "Back">
-		<%= link_to 'Back', languages_path %>
+	<div class = "Menu">
+		<%= link_to 'Main Menu', languages_path %>
+		<%= link_to "Signout", destroy_user_session_path, method: :delete%>
 	</div>
 </body>
