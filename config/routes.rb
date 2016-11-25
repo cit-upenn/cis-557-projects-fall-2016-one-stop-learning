@@ -76,13 +76,19 @@
 
 
 Rails.application.routes.draw do
+ 
+
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :langopts
-  
+  resources :comments, only: [:index, :create]
+  get '/comments/new/(:parent_id)', to: 'comments#new', as: :new_comment
+
   
   
   root 'languages#index' 
   get 'languages' => 'languages#index'
+
+
   # match 'page_redirect' => 'languages#page_redirect', :as =>'page_redirect',:via => [:post]
   get 'languages/cpp' => 'cpp#index'
   get 'languages/java' => 'java#index'
@@ -93,11 +99,17 @@ Rails.application.routes.draw do
   get '/users/omniauth_callbacks' => 'user#facebook'
   post 'languages' => 'languages#select'
 
-  # Routes to handle favorite links.
+
   post 'languages/python' => 'python#favorite'
   post 'languages/ruby' => 'ruby#favorite'
   post 'languages/java' => 'java#favorite'
   post 'languages/cpp' => 'cpp#favorite'
+
+  # Routes for comments
+  get 'comments/index'
+  get 'comments/new'
+  get 'comments/create'
+  
 
   # devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 

@@ -3,6 +3,7 @@
   <title>Ruby</title>
 </head>
 <body>
+<<<<<<< HEAD
 <p id="notice"><%= notice %></p>
 <h1>Onestop Learning</h1>
 <h2>Ruby</h2>
@@ -25,7 +26,38 @@
 <h3>Official Documentation</h3>
   <a id = "doc" href = "http://ruby-doc.org/">Documentation</a>
 
-  <div class = "Back">
-    <%= link_to 'Back', languages_path %>
-  </div>
+ 
+	<h1>Onestop Learning</h1>
+	<h2>Ruby</h2>
+	<h3>Video Tutorial</h3>
+	<ul>
+		<li> <h4>By Derek Banas</h4>
+			<iframe width="600" height="400"
+				src="https://www.youtube.com/embed/Dji9ALCgfpM?controls=1">
+			</iframe>
+			<p><b>Description</b></p>
+			<p>This video is a perfect revision lecture and covers most of the fundamentals. The length and the pacing of information  mades it really good as a preview.</p>
+		</li>
+		<li> <h4>By Jake Day Williams</h4>
+			<iframe width="600" height="400"
+				src="https://www.youtube.com/embed/8I539U5lXWY?controls=1">
+			</iframe>
+			<p><b>Description</b></p>
+			<p> This video series is ideal for beginners and covers all the basic concepts in-depth.</p>
+		</li>
+		<li> <h4>By Smartherd</h4>
+			<iframe width="600" height="400"
+				src="https://www.youtube.com/embed/SHzeVBrW_rA?controls=1">
+			</iframe>
+			<p><b>Description</b></p>
+			<p>  Good tutorial for the freshers. Every concept is explained very clearly and even a viewer who doesn't know anything about coding can also understand it easily.</p>
+		</li>
+	</ul>
+	<h3>Official Documentation</h3>
+	<a id = "doc" href = "http://ruby-doc.org/">Documentation</a>
+	<div class = "Menu">
+		<%= link_to 'Main Menu', languages_path %>
+		<%= link_to "Signout", destroy_user_session_path, method: :delete%>
+	</div>
+
 </body>
