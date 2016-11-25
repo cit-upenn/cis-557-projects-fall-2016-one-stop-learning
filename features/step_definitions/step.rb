@@ -19,7 +19,7 @@ end
 
 Then(/^I should be able to signIn$/) do
   assert page.has_content?("Onestop Learning")
-  click_button('Signout')
+  click_link('Signout')
 end
 
 
@@ -39,7 +39,7 @@ end
 
 Then(/^I should be able to signup$/) do
   assert page.has_content? ("Onestop Learning")
-  click_button('Signout')
+  click_link('Signout')
 end
 
 
@@ -59,7 +59,7 @@ end
 
 When(/^I click on signout$/) do
   # find('a').click
-  click_button 'Signout'
+  click_link 'Signout'
 end
 
 Then(/^I should signout$/) do
@@ -111,8 +111,8 @@ Given(/^I'm on the Language page$/) do
 end
 
 
-When(/^I click on the Back button$/) do
-  click_link('Back')
+When(/^I click on the Main Menu link$/) do
+  click_link('Main Menu')
 end
 
 Then(/^I should be able to see the Main Page$/) do
@@ -270,4 +270,23 @@ Then(/^the link should be removed from the Favorite Links$/) do
   # page.reload()
   # save_and_open_page
   assert page.has_content?("#{@language} : #{@owner}") == false
+end
+
+
+# ---------------- Comments Section ----------------------------
+
+Given(/^I'm on the Comments Page$/) do
+  User.create(email: "rss@upenn.edu", encrypted_password: "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge")
+  Langopt.create(name: "Python")
+  visit(comments_path)
+  fill_in 'Email', :with => 'rss@upenn.edu'
+  fill_in 'Password', :with => '12345678'
+end
+
+When(/^I click on the Add Comment link$/) do
+  pending
+end
+
+Then(/^the new comment should be added$/) do
+  pending # Write code here that turns the phrase above into concrete actions
 end
