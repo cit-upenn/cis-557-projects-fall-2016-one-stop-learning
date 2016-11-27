@@ -19,7 +19,7 @@ end
 
 Then(/^I should be able to signIn$/) do
   assert page.has_content?("Onestop Learning")
-  click_link('Signout')
+  click_button('Signout')
 end
 
 
@@ -39,7 +39,7 @@ end
 
 Then(/^I should be able to signup$/) do
   assert page.has_content? ("Onestop Learning")
-  click_link('Signout')
+  click_button('Signout')
 end
 
 
@@ -59,7 +59,7 @@ end
 
 When(/^I click on signout$/) do
   # find('a').click
-  click_link 'Signout'
+  click_button 'Signout'
 end
 
 Then(/^I should signout$/) do
@@ -273,20 +273,59 @@ Then(/^the link should be removed from the Favorite Links$/) do
 end
 
 
-# ---------------- Comments Section ----------------------------
+# ---------------- New Comments Section ----------------------------
 
-Given(/^I'm on the Comments Page$/) do
+Given(/^I'm on the New Comments Page$/) do
+  visit(comments_new_path)
+end
+
+When(/^I add a new comment$/) do
   User.create(email: "rss@upenn.edu", encrypted_password: "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge")
-  Langopt.create(name: "Python")
-  visit(comments_path)
   fill_in 'Email', :with => 'rss@upenn.edu'
   fill_in 'Password', :with => '12345678'
+  click_button('Log in')
+  fill_in 'Title', :with => 'Ruby on Rails'
+  fill_in 'Body', :with => 'It is a great framework!'
+  click_button 'Create Comment'
 end
 
-When(/^I click on the Add Comment link$/) do
-  pending
+Then(/^The new comment should be added$/) do
+  assert page.has_content? ("Ruby on Rails")
+  assert page.has_content? ("It is a great framework!")
 end
 
-Then(/^the new comment should be added$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+When(/^I try to add a new comment$/) do
+  User.create(email: "rss@upenn.edu", encrypted_password: "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge")
+  fill_in 'Email', :with => 'rss@upenn.edu'
+  fill_in 'Password', :with => '12345678'
+  click_button('Log in')
+end
+
+Then(/^The Author field should be auto-populated with my email id$/) do
+  # expect(page).to have_selector("comment_author[value='rss@upenn.edu']")
+  assert page.has_field?('Author', with: 'rss@upenn.edu')
+end
+
+# ------------------------ Reply to comments section ----------------------------
+
+Given(/^I'm on the Comments Page$/) do
+  visit(comments_path)
+end
+
+When(/^I reply to a new comment$/) do
+  Comment.create(title: "Java Threads", author: "user1@upenn.edu", body: "This is very helpful")
+  User.create(email: "rss@upenn.edu", encrypted_password: "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge")
+  fill_in 'Email', :with => 'rss@upenn.edu'
+  fill_in 'Password', :with => '12345678'
+  click_button('Log in')
+  click_link('reply')
+  fill_in 'Title', :with => 'My reply'
+  fill_in 'Body', :with => 'Even I think so'
+  click_button 'Create Comment'
+
+end
+
+Then(/^The new reply should be added to that comment$/) do
+  assert page.has_content? ("My reply")
+  assert page.has_content? ("Even I think so")
 end

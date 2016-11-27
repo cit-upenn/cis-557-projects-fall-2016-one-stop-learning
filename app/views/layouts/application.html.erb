@@ -41,6 +41,12 @@
 	</div> <!-- /container -->
 <% end%>
 
+
+<div class = "Menu">
+    <%= link_to 'Main Menu', languages_path %>
+    <%= button_to "Signout", destroy_user_session_path, method: :delete%>
+</div>
+
 <footer>
         <p>&copy; OneStopLearn 2016</p>
 </footer>
