@@ -13,17 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20161128074119) do
 
-  create_table "cppquizzes", force: :cascade do |t|
-    t.text     "question"
-    t.text     "ans1"
-    t.text     "ans2"
-    t.text     "ans3"
-    t.text     "ans4"
-    t.integer  "correctAns"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "comment_hierarchies", id: false, force: :cascade do |t|
     t.integer "ancestor_id",   null: false
     t.integer "descendant_id", null: false
@@ -40,6 +29,17 @@ ActiveRecord::Schema.define(version: 20161128074119) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "parent_id"
+  end
+
+  create_table "cppquizzes", force: :cascade do |t|
+    t.text     "question"
+    t.text     "ans1"
+    t.text     "ans2"
+    t.text     "ans3"
+    t.text     "ans4"
+    t.integer  "correctAns"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "favorites", force: :cascade do |t|
@@ -105,6 +105,7 @@ ActiveRecord::Schema.define(version: 20161128074119) do
     t.integer  "correctAns"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
 
   create_table "user_favorites", force: :cascade do |t|
     t.integer  "user_id"

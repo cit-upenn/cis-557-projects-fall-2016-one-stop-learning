@@ -76,35 +76,7 @@
 
 
 Rails.application.routes.draw do
-<<<<<<< HEAD
-  resources :cppquizzes do
-    collection do
-    get :answering
-    get :check
-    end
-  end
-  resources :pythonquizzes do
-    collection do
-    get :answering
-    get :check
-    end
-  end
-  resources :javaquizzes do
-    collection do
-    get :answering
-    get :check
-    end
-  end
-  resources :rubyquizzes do
-  collection do
-    get :answering
-    get :check
-  end
-  end
-=======
- 
 
->>>>>>> origin/add_favorites
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :langopts
   resources :comments, only: [:index, :create]
@@ -140,6 +112,30 @@ Rails.application.routes.draw do
   post 'languages/java' => 'java#favorite'
   post 'languages/cpp' => 'cpp#favorite'
 
+  resources :cppquizzes do
+    collection do
+    get :answering
+    get :check
+    end
+  end
+  resources :pythonquizzes do
+    collection do
+    get :answering
+    get :check
+    end
+  end
+  resources :javaquizzes do
+    collection do
+    get :answering
+    get :check
+    end
+  end
+  resources :rubyquizzes do
+  collection do
+    get :answering
+    get :check
+  end
+  end
   
   
   # devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
