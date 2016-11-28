@@ -1,0 +1,1 @@
+json.partial! "pythonquizzes/pythonquiz", pythonquiz: @pythonquiz

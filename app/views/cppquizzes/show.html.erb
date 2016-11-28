@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @cppquiz.question %>
+</p>
+
+<p>
+  <strong>Ans1:</strong>
+  <%= @cppquiz.ans1 %>
+</p>
+
+<p>
+  <strong>Ans2:</strong>
+  <%= @cppquiz.ans2 %>
+</p>
+
+<p>
+  <strong>Ans3:</strong>
+  <%= @cppquiz.ans3 %>
+</p>
+
+<p>
+  <strong>Ans4:</strong>
+  <%= @cppquiz.ans4 %>
+</p>
+
+<p>
+  <strong>Correctans:</strong>
+  <%= @cppquiz.correctAns %>
+</p>
+
+<%= link_to 'Edit', edit_cppquiz_path(@cppquiz) %> |
+<%= link_to 'Back', cppquizzes_path %>

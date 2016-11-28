@@ -34,6 +34,30 @@
 
 
 Rails.application.routes.draw do
+  resources :cppquizzes do
+    collection do
+    get :answering
+    get :check
+    end
+  end
+  resources :pythonquizzes do
+    collection do
+    get :answering
+    get :check
+    end
+  end
+  resources :javaquizzes do
+    collection do
+    get :answering
+    get :check
+    end
+  end
+  resources :rubyquizzes do
+  collection do
+    get :answering
+    get :check
+  end
+  end
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :langopts
   
@@ -47,7 +71,12 @@ Rails.application.routes.draw do
   get 'languages/python' => 'python#index'
   get 'languages' => 'languages#index'
   get '/users/omniauth_callbacks' => 'user#facebook'
+  post 'cppquizzes/check'=>'cppquizzes#check'
+  post 'pythonquizzes/check'=>'pythonquizzes#check'
+  post 'javaquizzes/check'=>'javaquizzes#check'
+  post 'rubyquizzes/check'=>'rubyquizzes#check'
   post 'languages' => 'languages#select'
+
 
   # devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 

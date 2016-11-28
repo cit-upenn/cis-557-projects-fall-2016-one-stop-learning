@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pythonquizzes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Ans1</th>
+      <th>Ans2</th>
+      <th>Ans3</th>
+      <th>Ans4</th>
+      <th>Correctans</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pythonquizzes.each do |pythonquiz| %>
+      <tr>
+        <td><%= pythonquiz.question %></td>
+        <td><%= pythonquiz.ans1 %></td>
+        <td><%= pythonquiz.ans2 %></td>
+        <td><%= pythonquiz.ans3 %></td>
+        <td><%= pythonquiz.ans4 %></td>
+        <td><%= pythonquiz.correctAns %></td>
+        <td><%= link_to 'Show', pythonquiz %></td>
+        <td><%= link_to 'Edit', edit_pythonquiz_path(pythonquiz) %></td>
+        <td><%= link_to 'Destroy', pythonquiz, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pythonquiz', new_pythonquiz_path %>

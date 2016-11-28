@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Cppquizzes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Question</th>
+      <th>Ans1</th>
+      <th>Ans2</th>
+      <th>Ans3</th>
+      <th>Ans4</th>
+      <th>Correctans</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cppquizzes.each do |cppquiz| %>
+      <tr>
+        <td><%= cppquiz.question %></td>
+        <td><%= cppquiz.ans1 %></td>
+        <td><%= cppquiz.ans2 %></td>
+        <td><%= cppquiz.ans3 %></td>
+        <td><%= cppquiz.ans4 %></td>
+        <td><%= cppquiz.correctAns %></td>
+        <td><%= link_to 'Show', cppquiz %></td>
+        <td><%= link_to 'Edit', edit_cppquiz_path(cppquiz) %></td>
+        <td><%= link_to 'Destroy', cppquiz, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cppquiz', new_cppquiz_path %>

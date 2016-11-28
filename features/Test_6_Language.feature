@@ -1,7 +1,7 @@
-Feature: View video tutorial and documentation
+Feature: View video tutorial,quiz and documentation
 
   As a user
-  So that I can view the video turorials and documentation
+  So that I can view the video tutorials, quiz and documentation
   I want to select the link
   
   
@@ -9,6 +9,9 @@ Feature: View video tutorial and documentation
     Given I'm on the Ruby page
     When I click on a video link
     Then I should be able to see the video tutorial
+
+    When I click on a quiz link
+    Then I should be able to see the quiz
 
     When I click on the documentation link
     Then I should be able to see the documentation
