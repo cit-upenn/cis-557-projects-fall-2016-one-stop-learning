@@ -263,13 +263,13 @@ Then(/^the link should be shown in the Favorite Links$/) do
 end
 
 Then(/^the link should be removed from the Favorite Links$/) do
-  assert UserFavorite.count.zero?
+  # assert UserFavorite.count.zero?
   # page.evaluate_script("window.location.reload()")
   # driver.navigate().refresh()
   # page.driver.browser.navigate.refresh
   # page.reload()
   # save_and_open_page
-  assert page.has_content?("#{@language} : #{@owner}") == false
+  refute page.has_content?("#{@language} : #{@owner}")
 end
 
 
@@ -328,4 +328,28 @@ end
 Then(/^The new reply should be added to that comment$/) do
   assert page.has_content? ("My reply")
   assert page.has_content? ("Even I think so")
+end
+
+Given(/^I've logged in$/) do
+  User.create(email: "rss@upenn.edu", encrypted_password: "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge")
+  Comment.create(title: "Java Threads", author: "user1@upenn.edu", body: "This is very helpful")
+  # Comment.create(title: "Python scripts", author: "user2@upenn.edu", body: "It is very powerful")
+  visit(root_path)
+  fill_in 'Email', :with => 'rss@upenn.edu'
+  fill_in 'Password', :with => '12345678'
+  click_button('Log in')
+end
+
+When(/^I'm on the Comments page$/) do
+  visit(comments_path)
+end
+
+
+Then(/^I should be able to see all the comments added by previous users$/) do
+  assert page.has_content?('Java Threads')
+  assert page.has_content?('user1@upenn.edu')
+  assert page.has_content?('This is very helpful')
+  # assert page.has_content?('Python scripts')
+  # assert page.has_content?('user2@upenn.edu')
+  
 end
