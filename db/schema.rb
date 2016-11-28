@@ -24,14 +24,32 @@ ActiveRecord::Schema.define(version: 20161128074119) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "favorites", force: :cascade do |t|
-    t.string   "url"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "comment_hierarchies", id: false, force: :cascade do |t|
+    t.integer "ancestor_id",   null: false
+    t.integer "descendant_id", null: false
+    t.integer "generations",   null: false
   end
 
-  add_index "favorites", ["user_id"], name: "index_favorites_on_user_id"
+  add_index "comment_hierarchies", ["ancestor_id", "descendant_id", "generations"], name: "comment_anc_desc_udx", unique: true
+  add_index "comment_hierarchies", ["descendant_id"], name: "comment_desc_idx"
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "title"
+    t.string   "author"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "parent_id"
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.string   "url"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "description"
+    t.string   "language"
+    t.string   "owner"
+  end
 
   create_table "javaquizzes", force: :cascade do |t|
     t.text     "question"
@@ -87,6 +105,14 @@ ActiveRecord::Schema.define(version: 20161128074119) do
     t.integer  "correctAns"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+
+  create_table "user_favorites", force: :cascade do |t|
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "owner"
+    t.string   "language"
+    t.string   "url"
   end
 
   create_table "users", force: :cascade do |t|

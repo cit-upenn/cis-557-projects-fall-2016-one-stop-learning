@@ -27,10 +27,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 
+
 gem 'devise', '~> 3.4'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'certified'
+gem 'closure_tree'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

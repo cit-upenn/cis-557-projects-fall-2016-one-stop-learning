@@ -1,35 +1,28 @@
 <!DOCTYPE html>
 <head>
-	<title>Java</title>
+  <title>Java</title>
 </head>
 <body>
-	<h1>Onestop Learning</h1>
-	<h2>Java</h2>
-	<h3>Video Tutorial</h3>
-	<ul>
-		<li> <h4>By Derek Banas</h4>
-			<iframe width="600" height="400"
-				src="https://www.youtube.com/embed/WPvGqX-TXP0?controls=1">
-			</iframe>
-			<p><b>Description</b></p>
-			<p>This Java programming Tutorial teachs you all of the core knowledge needed to write Java code in 30 minutes. It specifically covers the following topics: primitive data types, comments, class, import, Scanner, final, Strings, static, private, protected, public, constructors, math, hasNextLine, nextLine, getters, setters, method overloading, Random, casting, toString, conversion from Strings to primitives, converting from primitives to Strings, if, else, else if, print, println, printf, logical operators, comparison operators, ternary operator, switch, for, while, break, continue, do while, polymorphism, arrays, for each, multidimensional arrays and more.</p>
-			</li>
-			<li> <h4>By Software Tutorials</h4>
-			<iframe width="600" height="400"
-				src="https://www.youtube.com/embed/Cfd9DOnuF9w?controls=1">
-			</iframe>
-			<p><b>Description</b></p>
-			<p>This series covers the basic concepts of Java. The instructor provides great explanation and makes the concepts easy to follow and understand.</p>
-		</li>
-		<li> <h4>By WEB Technology</h4>
-			<iframe width="600" height="400"
-				src="https://www.youtube.com/embed/RGcDksxiyJo?controls=1">
-			</iframe>
-			<p><b>Description</b></p>
-			<p> This video aims at teaching Java to absolute beginners. The explanations and images combined make up a great tutorial.</p>
-		</li>
-	</ul>
-	<h3>Official Documentation</h3>
+<p id="notice"><%= notice %></p>
+<h1>Onestop Learning</h1>
+<h2>Java</h2>
+<h3>Video Tutorials</h3>
+<ul>
+    <% @favorites.each do |f| %>
+      <li> <h4>By <%= f.owner %></h4>
+      <span>
+        <%= button_to "favorite",   languages_java_path(url: f.url, owner: f.owner, lang: f.language , type: "favorite"), method: :post %>
+        <%= button_to "unfavorite", languages_java_path(url: f.url, owner: f.owner, lang: f.language , type: "unfavorite"), method: :post %>
+      </span>
+      <iframe width="400" height="300"
+        src= <%=f.url %> >
+      </iframe>
+      <p><b>Description</b></p>
+      <p><%= f.description %></p>
+    </li>
+   <% end %>
+</ul>
+<h3>Official Documentation</h3>
 	<a id = "doc" href = "https://docs.oracle.com/javase/8/">Documentation</a>
 <br>
 	<%= link_to 'Quiz', {:controller => "javaquizzes", :action => "answering" , :id => "1"}%><br>

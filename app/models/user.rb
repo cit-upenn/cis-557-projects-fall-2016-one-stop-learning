@@ -15,6 +15,8 @@
 #  last_sign_in_ip        :string
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
+#  provider               :string
+#  uid                    :string
 #
 
 class User < ActiveRecord::Base
@@ -26,6 +28,7 @@ class User < ActiveRecord::Base
   
   has_many :note
   has_many :favorite
+  has_many :user_favorite
 
   
   def self.from_omniauth(auth)

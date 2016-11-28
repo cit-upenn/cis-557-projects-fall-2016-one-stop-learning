@@ -1,3 +1,45 @@
+# == Route Map
+#
+#                   Prefix Verb     URI Pattern                            Controller#Action
+#         new_user_session GET      /users/sign_in(.:format)               devise/sessions#new
+#             user_session POST     /users/sign_in(.:format)               devise/sessions#create
+#     destroy_user_session DELETE   /users/sign_out(.:format)              devise/sessions#destroy
+#  user_omniauth_authorize GET|POST /users/auth/:provider(.:format)        users/omniauth_callbacks#passthru {:provider=>/facebook/}
+#   user_omniauth_callback GET|POST /users/auth/:action/callback(.:format) users/omniauth_callbacks#(?-mix:facebook)
+#            user_password POST     /users/password(.:format)              devise/passwords#create
+#        new_user_password GET      /users/password/new(.:format)          devise/passwords#new
+#       edit_user_password GET      /users/password/edit(.:format)         devise/passwords#edit
+#                          PATCH    /users/password(.:format)              devise/passwords#update
+#                          PUT      /users/password(.:format)              devise/passwords#update
+# cancel_user_registration GET      /users/cancel(.:format)                devise/registrations#cancel
+#        user_registration POST     /users(.:format)                       devise/registrations#create
+#    new_user_registration GET      /users/sign_up(.:format)               devise/registrations#new
+#   edit_user_registration GET      /users/edit(.:format)                  devise/registrations#edit
+#                          PATCH    /users(.:format)                       devise/registrations#update
+#                          PUT      /users(.:format)                       devise/registrations#update
+#                          DELETE   /users(.:format)                       devise/registrations#destroy
+#                 langopts GET      /langopts(.:format)                    langopts#index
+#                          POST     /langopts(.:format)                    langopts#create
+#              new_langopt GET      /langopts/new(.:format)                langopts#new
+#             edit_langopt GET      /langopts/:id/edit(.:format)           langopts#edit
+#                  langopt GET      /langopts/:id(.:format)                langopts#show
+#                          PATCH    /langopts/:id(.:format)                langopts#update
+#                          PUT      /langopts/:id(.:format)                langopts#update
+#                          DELETE   /langopts/:id(.:format)                langopts#destroy
+#                     root GET      /                                      languages#index
+#            languages_cpp GET      /languages/cpp(.:format)               cpp#index
+#           languages_java GET      /languages/java(.:format)              java#index
+#           languages_ruby GET      /languages/ruby(.:format)              ruby#index
+#         languages_python GET      /languages/python(.:format)            python#index
+#                languages GET      /languages(.:format)                   languages#index
+# users_omniauth_callbacks GET      /users/omniauth_callbacks(.:format)    user#facebook
+#                          POST     /languages(.:format)                   languages#select
+#                          POST     /languages/python(.:format)            python#favorite
+#                          POST     /languages/ruby(.:format)              ruby#favorite
+#                          POST     /languages/java(.:format)              java#favorite
+#                          POST     /languages/cpp(.:format)               cpp#favorite
+#
+
 #         new_user_session GET      /users/sign_in(.:format)               devise/sessions#new
 #             user_session POST     /users/sign_in(.:format)               devise/sessions#create
 #     destroy_user_session DELETE   /users/sign_out(.:format)              devise/sessions#destroy
@@ -34,6 +76,7 @@
 
 
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :cppquizzes do
     collection do
     get :answering
@@ -58,18 +101,28 @@ Rails.application.routes.draw do
     get :check
   end
   end
+=======
+ 
+
+>>>>>>> origin/add_favorites
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :langopts
+  resources :comments, only: [:index, :create]
+  get '/comments/new/(:parent_id)', to: 'comments#new', as: :new_comment
+
   
   
-  
- root 'languages#index' 
+  root 'languages#index' 
+  get 'languages' => 'languages#index'
+
+
   # match 'page_redirect' => 'languages#page_redirect', :as =>'page_redirect',:via => [:post]
   get 'languages/cpp' => 'cpp#index'
   get 'languages/java' => 'java#index'
   get 'languages/ruby' => 'ruby#index'
   get 'languages/python' => 'python#index'
-  get 'languages' => 'languages#index'
+
+  
   get '/users/omniauth_callbacks' => 'user#facebook'
   post 'cppquizzes/check'=>'cppquizzes#check'
   post 'pythonquizzes/check'=>'pythonquizzes#check'
@@ -77,7 +130,18 @@ Rails.application.routes.draw do
   post 'rubyquizzes/check'=>'rubyquizzes#check'
   post 'languages' => 'languages#select'
 
+  # Routes for comments
+  get 'comments/index'
+  get 'comments/new'
+  get 'comments/create'
 
+  post 'languages/python' => 'python#favorite'
+  post 'languages/ruby' => 'ruby#favorite'
+  post 'languages/java' => 'java#favorite'
+  post 'languages/cpp' => 'cpp#favorite'
+
+  
+  
   # devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   # devise_scope :user do
