@@ -24678,3 +24678,345 @@ Processing by PythonController#index as HTML
 Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 1.0ms)
   [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "user_favorites"
   [1m[36m (5.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mFavorite Load (0.0ms)[0m  SELECT "favorites".* FROM "favorites"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "favorites" WHERE "favorites"."id" = ?  [["id", 745]]
+  [1m[36m (15.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 746]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "favorites" WHERE "favorites"."id" = ?  [["id", 747]]
+  [1m[36m (15.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 748]]
+  [1m[35m (15.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "favorites" WHERE "favorites"."id" = ?  [["id", 749]]
+  [1m[36m (15.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 750]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "favorites" WHERE "favorites"."id" = ?  [["id", 751]]
+  [1m[36m (31.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 752]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "favorites" WHERE "favorites"."id" = ?  [["id", 753]]
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 754]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "favorites" WHERE "favorites"."id" = ?  [["id", 755]]
+  [1m[36m (31.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 756]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["url", "https://www.youtube.com/embed/N4mEzFDjqtA?controls=1"], ["description", "This\nvideo covers modules, comments, print, arithmetic operators, order of\noperation, lists, tuples, dictionaries, conditional operators, logical\noperators, if, else, elif, loops, for, while, break, continue, functions,\nreturn, readline(), string operators, file i/o, classes, objects and much\nmore."], ["language", "Python"], ["owner", "Derek Banas"], ["created_at", "2016-12-02 19:34:48.291251"], ["updated_at", "2016-12-02 19:34:48.291251"]]
+  [1m[36m (15.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["url", "https://www.youtube.com/embed/cpPG0bKHYKc?controls=1"], ["description", "This Python Programming Tutorial covers the instillation python and\nsetting up the python development environment. This video covers\nsetting up a system variable for using python from the windows command\nprompt and also covers using python from the built in IDLE IDE. After\nsetting up the development an environment this video demonstrates how\nto create and run your first python script (Hello World).This video\nseries is ideal for individuals looking to learn their\nfirst programming language or individuals looking to learn python\nas another programming language."], ["language", "Python"], ["owner", "onestopprogramming"], ["created_at", "2016-12-02 19:34:48.306879"], ["updated_at", "2016-12-02 19:34:48.306879"]]
+  [1m[35m (15.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["url", "https://www.youtube.com/embed/4Mf0h3HphEA?controls=1"], ["description", "This series assumes zero prior knowledge of programming and will\nleave you with a firm grasp of the language. The instructor strikes a really\ngreat balance between being funny while also being easy to listen."], ["language", "Python"], ["owner", "thenewboston"], ["created_at", "2016-12-02 19:34:48.322534"], ["updated_at", "2016-12-02 19:34:48.322534"]]
+  [1m[36m (15.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (15.6ms)[0m  [1mINSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["url", "https://www.youtube.com/embed/Dji9ALCgfpM?controls=1"], ["description", "This video is a perfect revision lecture and covers most of the\nfundamentals. The length and the pacing of information  mades it really good\nas a preview."], ["language", "Ruby"], ["owner", "Derek Banas"], ["created_at", "2016-12-02 19:34:48.338133"], ["updated_at", "2016-12-02 19:34:48.338133"]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["url", "https://www.youtube.com/embed/8I539U5lXWY?controls=1"], ["description", "This video series is ideal for beginners and covers all the\nbasic concepts in-depth."], ["language", "Ruby"], ["owner", "Jake Day Williams"], ["created_at", "2016-12-02 19:34:48.353757"], ["updated_at", "2016-12-02 19:34:48.353757"]]
+  [1m[36m (15.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["url", "https://www.youtube.com/embed/Dji9ALCgfpM?controls=1"], ["description", "Good tutorial for the freshers. Every concept is explained very\nclearly and even a viewer who doesn't know anything about coding can also\nunderstand it easily."], ["language", "Ruby"], ["owner", "Smartherd"], ["created_at", "2016-12-02 19:34:48.369385"], ["updated_at", "2016-12-02 19:34:48.369385"]]
+  [1m[35m (15.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["url", "https://www.youtube.com/embed/Rub-JsjMhWY?controls=1"], ["description", "This video is a great refresher course and covers datatypes,\narithmetic operations, if statement, switch statement, ternary operator,\narrays, for loop, while loop, do while loop, how to obtain user input,\nstrings, vectors, functions, recursive functions, exception handling,\npointers, reference operator, classes / objects, static variables and\nfunctions, constructors, inheritance, virtual methods, polymorphism and\nabstract data type."], ["language", "C++"], ["owner", "Derek Banas"], ["created_at", "2016-12-02 19:34:48.385041"], ["updated_at", "2016-12-02 19:34:48.385041"]]
+  [1m[36m (15.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["url", "https://www.youtube.com/embed/S3t-5UtvDN0?controls=1"], ["description", "This video series is ideal for beginners looking to learn C++ as\nit assumes zero prior knowledge of programming."], ["language", "C++"], ["owner", "Programming Tutorials"], ["created_at", "2016-12-02 19:34:48.400668"], ["updated_at", "2016-12-02 19:34:48.400668"]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["url", "https://www.youtube.com/embed/-WwGMNGRHdw?controls=1"], ["description", "This series covers the fundamentals of C++. Has great content\nand goes at an appropriate pace such that all the views irrespective of their\nbackground can follow it easily."], ["language", "C++"], ["owner", "Anurag Verma"], ["created_at", "2016-12-02 19:34:48.416264"], ["updated_at", "2016-12-02 19:34:48.416264"]]
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["url", "https://www.youtube.com/embed/WPvGqX-TXP0?controls=1"], ["description", "This Java programming Tutorial teachs you all of the core\nknowledge needed to write Java code in 30 minutes. It specifically covers the\nfollowing topics: primitive data types, comments, class, import, Scanner,\nfinal, Strings, static, private, protected, public, constructors, math,\nhasNextLine, nextLine, getters, setters, method overloading, Random, casting,\ntoString, conversion from Strings to primitives, converting from primitives to\nStrings, if, else, else if, print, println, printf, logical operators,\ncomparison operators, ternary operator, switch, for, while, break, continue,\ndo while, polymorphism, arrays, for each, multidimensional arrays and more."], ["language", "Java"], ["owner", "Derek Banas"], ["created_at", "2016-12-02 19:34:48.431922"], ["updated_at", "2016-12-02 19:34:48.431922"]]
+  [1m[35m (31.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["url", "https://www.youtube.com/embed/Cfd9DOnuF9w?controls=1"], ["description", "This series covers the basic concepts of Java. The instructor\nprovides great explanation and makes the concepts easy to follow and\nunderstand."], ["language", "Java"], ["owner", "Software Tutorials"], ["created_at", "2016-12-02 19:34:48.463149"], ["updated_at", "2016-12-02 19:34:48.463149"]]
+  [1m[36m (15.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["url", "https://www.youtube.com/embed/RGcDksxiyJo?controls=1"], ["description", "This video aims at teaching Java to absolute beginners. The\nexplanations and images combined make up a great tutorial."], ["language", "Java"], ["owner", "WEB Technology"], ["created_at", "2016-12-02 19:34:48.478769"], ["updated_at", "2016-12-02 19:34:48.478769"]]
+  [1m[35m (15.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2016-12-02 14:34:48 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 16ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-02 14:34:48 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 234ms (Views: 228.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-02 19:34:48.994449"], ["updated_at", "2016-12-02 19:34:48.994449"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Python"], ["created_at", "2016-12-02 19:34:48.994449"], ["updated_at", "2016-12-02 19:34:48.994449"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"rss@upenn.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "rss@upenn.edu"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-12-02 19:34:49.119462"], ["current_sign_in_at", "2016-12-02 19:34:49.119462"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-12-02 19:34:49.119462"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?  [["user_id", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 172ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by LanguagesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?  [["user_id", 1]]
+  [1m[36mLangopt Load (0.0ms)[0m  [1mSELECT "langopts".* FROM "langopts"[0m
+  Rendered languages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 31ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-02 19:34:49.260103"], ["updated_at", "2016-12-02 19:34:49.260103"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Python"], ["created_at", "2016-12-02 19:34:49.260103"], ["updated_at", "2016-12-02 19:34:49.260103"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"rss@upenn.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "rss@upenn.edu"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-12-02 19:34:49.353894"], ["current_sign_in_at", "2016-12-02 19:34:49.353894"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-12-02 19:34:49.353894"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?  [["user_id", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 78ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by LanguagesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?  [["user_id", 1]]
+  [1m[36mLangopt Load (0.0ms)[0m  [1mSELECT "langopts".* FROM "langopts"[0m
+  Rendered languages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started POST "/languages?method=post" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by LanguagesController#select as HTML
+  Parameters: {"utf8"=>"✓", "language"=>{"Langopt_id"=>"1"}, "commit"=>"Search", "method"=>"post"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?[0m  [["user_id", 1]]
+Redirected to http://www.example.com/languages/python
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/languages/python" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by PythonController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mFavorite Load (0.0ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."language" = ?  [["language", "Python"]]
+  Rendered python/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 63ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (15.6ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-02 19:34:49.447624"], ["updated_at", "2016-12-02 19:34:49.447624"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Python"], ["created_at", "2016-12-02 19:34:49.463264"], ["updated_at", "2016-12-02 19:34:49.463264"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16ms (Views: 4.5ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"rss@upenn.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "rss@upenn.edu"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-12-02 19:34:49.557050"], ["current_sign_in_at", "2016-12-02 19:34:49.557050"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-12-02 19:34:49.557050"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?[0m  [["user_id", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 78ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by LanguagesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mLangopt Load (0.0ms)[0m  SELECT "langopts".* FROM "langopts"
+  Rendered languages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started POST "/languages?method=post" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by LanguagesController#select as HTML
+  Parameters: {"utf8"=>"✓", "language"=>{"Langopt_id"=>"1"}, "commit"=>"Search", "method"=>"post"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?  [["user_id", 1]]
+Redirected to http://www.example.com/languages/python
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+Started GET "/languages/python" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by PythonController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?  [["user_id", 1]]
+  [1m[36mFavorite Load (0.0ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."language" = ?[0m  [["language", "Python"]]
+  Rendered python/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "user_favorites"
+Started POST "/languages/python?lang=Python&owner=Derek+Banas&type=favorite&url=https%3A%2F%2Fwww.youtube.com%2Fembed%2FN4mEzFDjqtA%3Fcontrols%3D1" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by PythonController#favorite as HTML
+  Parameters: {"lang"=>"Python", "owner"=>"Derek Banas", "type"=>"favorite", "url"=>"https://www.youtube.com/embed/N4mEzFDjqtA?controls=1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUserFavorite Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "user_favorites" WHERE "user_favorites"."user_id" = ? AND "user_favorites"."url" = ? LIMIT 1[0m  [["user_id", 1], ["url", "https://www.youtube.com/embed/N4mEzFDjqtA?controls=1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "user_favorites" ("user_id", "url", "owner", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["url", "https://www.youtube.com/embed/N4mEzFDjqtA?controls=1"], ["owner", "Derek Banas"], ["language", "Python"], ["created_at", "2016-12-02 19:34:49.603891"], ["updated_at", "2016-12-02 19:34:49.603891"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/languages/python
+Completed 302 Found in 31ms (ActiveRecord: 0.0ms)
+Started GET "/languages/python" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by PythonController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?  [["user_id", 1]]
+  [1m[36mFavorite Load (0.0ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."language" = ?[0m  [["language", "Python"]]
+  Rendered python/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUserFavorite Load (0.0ms)[0m  SELECT "user_favorites".* FROM "user_favorites" WHERE "user_favorites"."user_id" = ?  [["user_id", 1]]
+Completed 200 OK in 0ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "user_favorites"[0m
+Started POST "/languages/python?lang=Python&owner=Derek+Banas&type=unfavorite&url=https%3A%2F%2Fwww.youtube.com%2Fembed%2FN4mEzFDjqtA%3Fcontrols%3D1" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by PythonController#favorite as HTML
+  Parameters: {"lang"=>"Python", "owner"=>"Derek Banas", "type"=>"unfavorite", "url"=>"https://www.youtube.com/embed/N4mEzFDjqtA?controls=1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "user_favorites" WHERE "user_favorites"."user_id" = ? AND "user_favorites"."url" = ?  [["user_id", 1], ["url", "https://www.youtube.com/embed/N4mEzFDjqtA?controls=1"]]
+Redirected to http://www.example.com/languages/python
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/languages/python" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by PythonController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?  [["user_id", 1]]
+  [1m[36mFavorite Load (0.0ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."language" = ?[0m  [["language", "Python"]]
+  Rendered python/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "user_favorites"
+  [1m[36m (15.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-02 19:34:49.666397"], ["updated_at", "2016-12-02 19:34:49.666397"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Python"], ["created_at", "2016-12-02 19:34:49.666397"], ["updated_at", "2016-12-02 19:34:49.666397"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"rss@upenn.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "rss@upenn.edu"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-12-02 19:34:49.760188"], ["current_sign_in_at", "2016-12-02 19:34:49.760188"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-12-02 19:34:49.760188"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?[0m  [["user_id", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 78ms (ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by LanguagesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mLangopt Load (0.0ms)[0m  SELECT "langopts".* FROM "langopts"
+  Rendered languages/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+Started POST "/languages?method=post" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by LanguagesController#select as HTML
+  Parameters: {"utf8"=>"✓", "language"=>{"Langopt_id"=>"1"}, "commit"=>"Search", "method"=>"post"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?  [["user_id", 1]]
+Redirected to http://www.example.com/languages/python
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/languages/python" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by PythonController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?  [["user_id", 1]]
+  [1m[36mFavorite Load (0.0ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."language" = ?[0m  [["language", "Python"]]
+  Rendered python/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "user_favorites"
+Started POST "/languages/python?lang=Python&owner=Derek+Banas&type=favorite&url=https%3A%2F%2Fwww.youtube.com%2Fembed%2FN4mEzFDjqtA%3Fcontrols%3D1" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by PythonController#favorite as HTML
+  Parameters: {"lang"=>"Python", "owner"=>"Derek Banas", "type"=>"favorite", "url"=>"https://www.youtube.com/embed/N4mEzFDjqtA?controls=1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?  [["user_id", 1]]
+  [1m[36mUserFavorite Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "user_favorites" WHERE "user_favorites"."user_id" = ? AND "user_favorites"."url" = ? LIMIT 1[0m  [["user_id", 1], ["url", "https://www.youtube.com/embed/N4mEzFDjqtA?controls=1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "user_favorites" ("user_id", "url", "owner", "language", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["url", "https://www.youtube.com/embed/N4mEzFDjqtA?controls=1"], ["owner", "Derek Banas"], ["language", "Python"], ["created_at", "2016-12-02 19:34:49.807062"], ["updated_at", "2016-12-02 19:34:49.807062"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/languages/python
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+Started GET "/languages/python" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by PythonController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?  [["user_id", 1]]
+  [1m[36mFavorite Load (0.0ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."language" = ?[0m  [["language", "Python"]]
+  Rendered python/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUserFavorite Load (0.0ms)[0m  SELECT "user_favorites".* FROM "user_favorites" WHERE "user_favorites"."user_id" = ?  [["user_id", 1]]
+Completed 200 OK in 16ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+  [1m[36mUserFavorite Load (0.0ms)[0m  [1mSELECT  "user_favorites".* FROM "user_favorites"  ORDER BY "user_favorites"."id" ASC LIMIT 1[0m
+  [1m[35mUserFavorite Load (0.0ms)[0m  SELECT  "user_favorites".* FROM "user_favorites"  ORDER BY "user_favorites"."id" ASC LIMIT 1
+Started POST "/languages/python?lang=Python&owner=Derek+Banas&type=unfavorite&url=https%3A%2F%2Fwww.youtube.com%2Fembed%2FN4mEzFDjqtA%3Fcontrols%3D1" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by PythonController#favorite as HTML
+  Parameters: {"lang"=>"Python", "owner"=>"Derek Banas", "type"=>"unfavorite", "url"=>"https://www.youtube.com/embed/N4mEzFDjqtA?controls=1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?  [["user_id", 1]]
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "user_favorites" WHERE "user_favorites"."user_id" = ? AND "user_favorites"."url" = ?[0m  [["user_id", 1], ["url", "https://www.youtube.com/embed/N4mEzFDjqtA?controls=1"]]
+Redirected to http://www.example.com/languages/python
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+Started GET "/languages/python" for 127.0.0.1 at 2016-12-02 14:34:49 -0500
+Processing by PythonController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mFavorite Load (0.0ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."language" = ?  [["language", "Python"]]
+  Rendered python/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 0ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (15.6ms)[0m  [1mrollback transaction[0m

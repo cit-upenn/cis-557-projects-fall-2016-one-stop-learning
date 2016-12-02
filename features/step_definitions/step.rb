@@ -214,7 +214,7 @@ When(/^I click on the Unfavorite button$/) do
 
 Then(/^the link should be removed from the Favorite Table$/) do
   assert UserFavorite.count.zero?
-end
+endgit
 
 
 # ----------------Login Page should not have Favorite Links----------------

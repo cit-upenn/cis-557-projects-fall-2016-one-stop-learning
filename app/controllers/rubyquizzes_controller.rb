@@ -1,5 +1,4 @@
 class RubyquizzesController < ApplicationController
-  before_filter :authenticate, exec: [:home]
   before_action :set_rubyquiz, only: [:show, :edit, :update, :destroy]
 
   # GET /rubyquizzes
