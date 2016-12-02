@@ -1,9 +1,8 @@
 class FeedbacksController < ApplicationController
 
 
-  # GET /feedbacks
-  # GET /feedbacks.json
   def index
+    @show = false
   end
 
 

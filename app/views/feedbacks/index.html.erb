@@ -2,7 +2,12 @@
 <p>Some good things about the creators of OneStopLearn.</p>
 
 <%= form_tag :controller => "feedbacks", :action => "create", :method => 'post' do %>
-  <label>Feedback</label>
-  <%= text_field_tag(:comment)%>
+  <div><h3>Feedback</h3></div>
+  <span>
+  <%= text_area_tag('comment',nil, placeholder: 'Please enter your feedback...', cols: 75, rows: 10 )%>
+  </span>
+  <br>
+  <div>
   <%= submit_tag("Submit") %>
+  </div>
 <% end %>
