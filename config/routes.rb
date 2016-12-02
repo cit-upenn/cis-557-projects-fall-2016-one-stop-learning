@@ -1,6 +1,8 @@
 # == Route Map
 #
 #                   Prefix Verb     URI Pattern                            Controller#Action
+#                     root GET      /                                      languages#index
+#                languages GET      /languages(.:format)                   languages#index
 #         new_user_session GET      /users/sign_in(.:format)               devise/sessions#new
 #             user_session POST     /users/sign_in(.:format)               devise/sessions#create
 #     destroy_user_session DELETE   /users/sign_out(.:format)              devise/sessions#destroy
@@ -29,13 +31,14 @@
 #                 comments GET      /comments(.:format)                    comments#index
 #                          POST     /comments(.:format)                    comments#create
 #              new_comment GET      /comments/new(/:parent_id)(.:format)   comments#new
-#                     root GET      /                                      languages#index
-#                languages GET      /languages(.:format)                   languages#index
 #            languages_cpp GET      /languages/cpp(.:format)               cpp#index
 #           languages_java GET      /languages/java(.:format)              java#index
 #           languages_ruby GET      /languages/ruby(.:format)              ruby#index
 #         languages_python GET      /languages/python(.:format)            python#index
 #       languages_favorite GET      /languages/favorite(.:format)          favorites#index
+#                          POST     /languages/favorite(.:format)          favorites#add
+#                    about GET      /about(.:format)                       feedbacks#index
+#                          POST     /about(.:format)                       feedbacks#create
 # users_omniauth_callbacks GET      /users/omniauth_callbacks(.:format)    user#facebook
 #         cppquizzes_check POST     /cppquizzes/check(.:format)            cppquizzes#check
 #      pythonquizzes_check POST     /pythonquizzes/check(.:format)         pythonquizzes#check
@@ -128,15 +131,18 @@
 
 Rails.application.routes.draw do
 
+  
+  
+  root 'languages#index' 
+  get 'languages' => 'languages#index'
+  
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :langopts
   resources :comments, only: [:index, :create]
   get '/comments/new/(:parent_id)', to: 'comments#new', as: :new_comment
 
   
-  
-  root 'languages#index' 
-  get 'languages' => 'languages#index'
+
 
 
   # match 'page_redirect' => 'languages#page_redirect', :as =>'page_redirect',:via => [:post]
@@ -149,6 +155,11 @@ Rails.application.routes.draw do
   get 'languages/favorite' => 'favorites#index'
   post 'languages/favorite' => 'favorites#add'
   
+  #feedback
+  get 'about' => 'feedbacks#index'
+  post 'about' => 'feedbacks#create'
+
+  #facebook
   get '/users/omniauth_callbacks' => 'user#facebook'
   post 'cppquizzes/check'=>'cppquizzes#check'
   post 'pythonquizzes/check'=>'pythonquizzes#check'

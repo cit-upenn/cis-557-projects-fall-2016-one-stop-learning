@@ -1,0 +1,8 @@
+<h1>About OneStopLearn</h1>
+<p>Some good things about the creators of OneStopLearn.</p>
+
+<%= form_tag :controller => "feedbacks", :action => "create", :method => 'post' do %>
+  <label>Feedback</label>
+  <%= text_field_tag(:comment)%>
+  <%= submit_tag("Submit") %>
+<% end %>
