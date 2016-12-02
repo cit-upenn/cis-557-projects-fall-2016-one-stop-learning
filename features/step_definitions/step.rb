@@ -197,15 +197,19 @@ end
 
 When(/^I click on the Favorite button$/) do
   assert UserFavorite.count.zero?
-  first('.button_to').click_button('favorite')
+  # first('.button_to').click_button('favorite')
+  # page.all('.button_to')[1].click
+  # find('.button_to').click
+  click_button('favorite', match: :first)
   end
 
 Then(/^the link should be stored in the Favorite Table$/) do
-  assert UserFavorite.count.zero? == false
+  # save_and_open_page
+  refute UserFavorite.count.zero? 
 end
 
 When(/^I click on the Unfavorite button$/) do
-  page.all('.button_to')[1].click
+  click_button('unfavorite', match: :first)
   end
 
 Then(/^the link should be removed from the Favorite Table$/) do

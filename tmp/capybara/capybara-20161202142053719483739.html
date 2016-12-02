@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Onestop</title>
+  <link rel="stylesheet" media="all" href="/stylesheets/default.css" data-turbolinks-track="true" />
+  <script src="/javascripts/default.js" data-turbolinks-track="true"></script>
+  
+
+  <style type="text/css">
+    
+    div.container {
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    width: 250px;
+    height: 300px;
+    border: 1px solid blue;
+    align-content: right;
+}
+  </style>
+</head>
+<body>
+
+
+
+  <div class = "Favorite">
+      <a href="/languages/favorite">Favorites</a>      
+  </div> 
+  <div class = "Menu">
+      <a href="/languages">Main Menu</a>
+      <form class="button_to" method="post" action="/users/sign_out"><input type="hidden" name="_method" value="delete" /><input type="submit" value="Signout" /></form>
+  </div>
+<!DOCTYPE html>
+<head>
+  <title>Python</title>
+</head>
+<body>
+<p id="notice"></p>
+<h1>Onestop Learning</h1>
+<h2>Python</h2>
+<h3>Video Tutorials</h3>
+<ul>
+      <li> <h4>By Derek Banas</h4>
+      <span>
+        <form class="button_to" method="post" action="/languages/python?lang=Python&amp;owner=Derek+Banas&amp;type=favorite&amp;url=https%3A%2F%2Fwww.youtube.com%2Fembed%2FN4mEzFDjqtA%3Fcontrols%3D1"><input type="submit" value="favorite" /></form>
+        <form class="button_to" method="post" action="/languages/python?lang=Python&amp;owner=Derek+Banas&amp;type=unfavorite&amp;url=https%3A%2F%2Fwww.youtube.com%2Fembed%2FN4mEzFDjqtA%3Fcontrols%3D1"><input type="submit" value="unfavorite" /></form>
+      </span>
+      <iframe width="400" height="300"
+        src= https://www.youtube.com/embed/N4mEzFDjqtA?controls=1 >
+      </iframe>
+      <p><b>Description</b></p>
+      <p>This
+video covers modules, comments, print, arithmetic operators, order of
+operation, lists, tuples, dictionaries, conditional operators, logical
+operators, if, else, elif, loops, for, while, break, continue, functions,
+return, readline(), string operators, file i/o, classes, objects and much
+more.</p>
+    </li>
+      <li> <h4>By onestopprogramming</h4>
+      <span>
+        <form class="button_to" method="post" action="/languages/python?lang=Python&amp;owner=onestopprogramming&amp;type=favorite&amp;url=https%3A%2F%2Fwww.youtube.com%2Fembed%2FcpPG0bKHYKc%3Fcontrols%3D1"><input type="submit" value="favorite" /></form>
+        <form class="button_to" method="post" action="/languages/python?lang=Python&amp;owner=onestopprogramming&amp;type=unfavorite&amp;url=https%3A%2F%2Fwww.youtube.com%2Fembed%2FcpPG0bKHYKc%3Fcontrols%3D1"><input type="submit" value="unfavorite" /></form>
+      </span>
+      <iframe width="400" height="300"
+        src= https://www.youtube.com/embed/cpPG0bKHYKc?controls=1 >
+      </iframe>
+      <p><b>Description</b></p>
+      <p>This Python Programming Tutorial covers the instillation python and
+setting up the python development environment. This video covers
+setting up a system variable for using python from the windows command
+prompt and also covers using python from the built in IDLE IDE. After
+setting up the development an environment this video demonstrates how
+to create and run your first python script (Hello World).This video
+series is ideal for individuals looking to learn their
+first programming language or individuals looking to learn python
+as another programming language.</p>
+    </li>
+      <li> <h4>By thenewboston</h4>
+      <span>
+        <form class="button_to" method="post" action="/languages/python?lang=Python&amp;owner=thenewboston&amp;type=favorite&amp;url=https%3A%2F%2Fwww.youtube.com%2Fembed%2F4Mf0h3HphEA%3Fcontrols%3D1"><input type="submit" value="favorite" /></form>
+        <form class="button_to" method="post" action="/languages/python?lang=Python&amp;owner=thenewboston&amp;type=unfavorite&amp;url=https%3A%2F%2Fwww.youtube.com%2Fembed%2F4Mf0h3HphEA%3Fcontrols%3D1"><input type="submit" value="unfavorite" /></form>
+      </span>
+      <iframe width="400" height="300"
+        src= https://www.youtube.com/embed/4Mf0h3HphEA?controls=1 >
+      </iframe>
+      <p><b>Description</b></p>
+      <p>This series assumes zero prior knowledge of programming and will
+leave you with a firm grasp of the language. The instructor strikes a really
+great balance between being funny while also being easy to listen.</p>
+    </li>
+</ul>
+<h3>Official Documentation</h3>
+	<a id = "doc" href = "https://docs.python.org/3/">Documentation</a>
+<br>
+	<a href="/pythonquizzes/answering?id=1">Quiz</a><br>
+	<div class = "Back">
+		<a href="/languages">Back</a>
+	</div>
+</body>
+
+    <div class="container">
+      <h3>Favorites : 0</h3>
+      <ul class="nav nav-list">
+      </ul>
+    </div> 
+<footer>
+        <p>&copy; OneStopLearn 2016</p>
+</footer>
+</body>
+</html>
