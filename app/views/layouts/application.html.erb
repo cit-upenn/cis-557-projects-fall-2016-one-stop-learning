@@ -38,23 +38,23 @@
 <%= yield %>
 
 <% if user_signed_in? %>
-  <div class="container">
-
-        <h3>Favorites : <%= @count %></h3>
-        <ul class="nav nav-list">
-          <% if @count != 0 %>
-            <% @links.each do |f| %>
-              <li>  
-              <span>
-              <%= f.language%> : 
-              <a href = <%= f.url %> > <%= f.owner %> </a>
-              </span>
-              </li>
-            <% end %>
+  <% if @show == true %>
+    <div class="container">
+      <h3>Favorites : <%= @count %></h3>
+      <ul class="nav nav-list">
+        <% if @count != 0 %>
+          <% @links.each do |f| %>
+            <li>  
+            <span>
+            <%= f.language%> : 
+            <a href = <%= f.url %> > <%= f.owner %> </a>
+            </span>
+            </li>
           <% end %>
-        </ul>
-           
-  </div> <!-- /container -->
+        <% end %>
+      </ul>
+    </div> 
+  <% end%>
 <% end%>
 <footer>
         <p>&copy; OneStopLearn 2016</p>

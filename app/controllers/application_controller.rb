@@ -4,14 +4,20 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :authenticate_user!
   before_action :application
+  layout "favorites" , :only => :do_not_display
 
   def application
-      if user_signed_in?
-    		@count = UserFavorite.where(user_id: current_user.id).count
-    		if @count > 0
-  	  		@links = UserFavorite.where(user_id: current_user.id)
-  	  	end
-      end
+    @show = true
+    if user_signed_in?
+  		@count = UserFavorite.where(user_id: current_user.id).count
+  		if @count > 0
+	  		@links = UserFavorite.where(user_id: current_user.id)
+	  	end
+    end
+  end
+
+  def do_not_display
+    @show = false
   end
 end
 
