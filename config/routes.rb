@@ -26,18 +26,69 @@
 #                          PATCH    /langopts/:id(.:format)                langopts#update
 #                          PUT      /langopts/:id(.:format)                langopts#update
 #                          DELETE   /langopts/:id(.:format)                langopts#destroy
+#                 comments GET      /comments(.:format)                    comments#index
+#                          POST     /comments(.:format)                    comments#create
+#              new_comment GET      /comments/new(/:parent_id)(.:format)   comments#new
 #                     root GET      /                                      languages#index
+#                languages GET      /languages(.:format)                   languages#index
 #            languages_cpp GET      /languages/cpp(.:format)               cpp#index
 #           languages_java GET      /languages/java(.:format)              java#index
 #           languages_ruby GET      /languages/ruby(.:format)              ruby#index
 #         languages_python GET      /languages/python(.:format)            python#index
-#                languages GET      /languages(.:format)                   languages#index
+#       languages_favorite GET      /languages/favorite(.:format)          favorites#index
 # users_omniauth_callbacks GET      /users/omniauth_callbacks(.:format)    user#facebook
+#         cppquizzes_check POST     /cppquizzes/check(.:format)            cppquizzes#check
+#      pythonquizzes_check POST     /pythonquizzes/check(.:format)         pythonquizzes#check
+#        javaquizzes_check POST     /javaquizzes/check(.:format)           javaquizzes#check
+#        rubyquizzes_check POST     /rubyquizzes/check(.:format)           rubyquizzes#check
 #                          POST     /languages(.:format)                   languages#select
+#           comments_index GET      /comments/index(.:format)              comments#index
+#             comments_new GET      /comments/new(.:format)                comments#new
+#          comments_create GET      /comments/create(.:format)             comments#create
 #                          POST     /languages/python(.:format)            python#favorite
 #                          POST     /languages/ruby(.:format)              ruby#favorite
 #                          POST     /languages/java(.:format)              java#favorite
 #                          POST     /languages/cpp(.:format)               cpp#favorite
+#     answering_cppquizzes GET      /cppquizzes/answering(.:format)        cppquizzes#answering
+#         check_cppquizzes GET      /cppquizzes/check(.:format)            cppquizzes#check
+#               cppquizzes GET      /cppquizzes(.:format)                  cppquizzes#index
+#                          POST     /cppquizzes(.:format)                  cppquizzes#create
+#              new_cppquiz GET      /cppquizzes/new(.:format)              cppquizzes#new
+#             edit_cppquiz GET      /cppquizzes/:id/edit(.:format)         cppquizzes#edit
+#                  cppquiz GET      /cppquizzes/:id(.:format)              cppquizzes#show
+#                          PATCH    /cppquizzes/:id(.:format)              cppquizzes#update
+#                          PUT      /cppquizzes/:id(.:format)              cppquizzes#update
+#                          DELETE   /cppquizzes/:id(.:format)              cppquizzes#destroy
+#  answering_pythonquizzes GET      /pythonquizzes/answering(.:format)     pythonquizzes#answering
+#      check_pythonquizzes GET      /pythonquizzes/check(.:format)         pythonquizzes#check
+#            pythonquizzes GET      /pythonquizzes(.:format)               pythonquizzes#index
+#                          POST     /pythonquizzes(.:format)               pythonquizzes#create
+#           new_pythonquiz GET      /pythonquizzes/new(.:format)           pythonquizzes#new
+#          edit_pythonquiz GET      /pythonquizzes/:id/edit(.:format)      pythonquizzes#edit
+#               pythonquiz GET      /pythonquizzes/:id(.:format)           pythonquizzes#show
+#                          PATCH    /pythonquizzes/:id(.:format)           pythonquizzes#update
+#                          PUT      /pythonquizzes/:id(.:format)           pythonquizzes#update
+#                          DELETE   /pythonquizzes/:id(.:format)           pythonquizzes#destroy
+#    answering_javaquizzes GET      /javaquizzes/answering(.:format)       javaquizzes#answering
+#        check_javaquizzes GET      /javaquizzes/check(.:format)           javaquizzes#check
+#              javaquizzes GET      /javaquizzes(.:format)                 javaquizzes#index
+#                          POST     /javaquizzes(.:format)                 javaquizzes#create
+#             new_javaquiz GET      /javaquizzes/new(.:format)             javaquizzes#new
+#            edit_javaquiz GET      /javaquizzes/:id/edit(.:format)        javaquizzes#edit
+#                 javaquiz GET      /javaquizzes/:id(.:format)             javaquizzes#show
+#                          PATCH    /javaquizzes/:id(.:format)             javaquizzes#update
+#                          PUT      /javaquizzes/:id(.:format)             javaquizzes#update
+#                          DELETE   /javaquizzes/:id(.:format)             javaquizzes#destroy
+#    answering_rubyquizzes GET      /rubyquizzes/answering(.:format)       rubyquizzes#answering
+#        check_rubyquizzes GET      /rubyquizzes/check(.:format)           rubyquizzes#check
+#              rubyquizzes GET      /rubyquizzes(.:format)                 rubyquizzes#index
+#                          POST     /rubyquizzes(.:format)                 rubyquizzes#create
+#             new_rubyquiz GET      /rubyquizzes/new(.:format)             rubyquizzes#new
+#            edit_rubyquiz GET      /rubyquizzes/:id/edit(.:format)        rubyquizzes#edit
+#                 rubyquiz GET      /rubyquizzes/:id(.:format)             rubyquizzes#show
+#                          PATCH    /rubyquizzes/:id(.:format)             rubyquizzes#update
+#                          PUT      /rubyquizzes/:id(.:format)             rubyquizzes#update
+#                          DELETE   /rubyquizzes/:id(.:format)             rubyquizzes#destroy
 #
 
 #         new_user_session GET      /users/sign_in(.:format)               devise/sessions#new
@@ -94,6 +145,9 @@ Rails.application.routes.draw do
   get 'languages/ruby' => 'ruby#index'
   get 'languages/python' => 'python#index'
 
+  # favorite page
+  get 'languages/favorite' => 'favorites#index'
+  post 'languages/favorite' => 'favorites#add'
   
   get '/users/omniauth_callbacks' => 'user#facebook'
   post 'cppquizzes/check'=>'cppquizzes#check'

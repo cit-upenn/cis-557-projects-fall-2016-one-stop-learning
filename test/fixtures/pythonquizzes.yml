@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: pythonquizzes
+#
+#  id         :integer          not null, primary key
+#  question   :text
+#  ans1       :text
+#  ans2       :text
+#  ans3       :text
+#  ans4       :text
+#  correctAns :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:

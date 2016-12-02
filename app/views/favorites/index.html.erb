@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  
+</head>
+<body>
+  <h2>Favorite Videos</h2>
+
+
+  <ul>
+    <% @fav.each do |f| %>
+      <li> <h4><%= f.language%> : By <%= f.owner%></h4>
+      <%= button_to "unfavorite", languages_favorite_path(url: f.url, owner: f.owner, type: "unfavorite"), method: :post %>
+      <iframe width="400"height="300"
+        src= <%=f.url %> >
+      </iframe>
+      </li>
+   <% end %>
+  </ul>
+
+  <div class = "container">
+    <span>Add Your Favorite Youtube Link(URL)</span>
+    <%= form_tag :controller => "favorites", :action => "add", :method => 'post' do %>
+      <label>URL</label>
+      <%= text_field_tag(:url) %>
+      <label>Language</label>
+      <%= text_field_tag(:lang) %>
+      <%= submit_tag("Add") %>
+    <% end %>
+  </div>
+
+
+</body>

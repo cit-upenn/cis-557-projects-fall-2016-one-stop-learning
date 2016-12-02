@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
   <style type="text/css">
     
     div.container {
@@ -20,9 +21,24 @@
 </head>
 <body>
 
-<%= yield %>
+
+<%- flash.each do |name, msg| -%>
+    <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+<%- end -%>
+
 <% if user_signed_in? %>
-	<div class="container">
+  <div class = "Favorite">
+      <%= link_to 'Favorites', languages_favorite_path %>      
+  </div> 
+  <div class = "Menu">
+      <%= link_to 'Main Menu', languages_path %>
+      <%= button_to "Signout", destroy_user_session_path, method: :delete%>
+  </div>
+<% end%>
+<%= yield %>
+
+<% if user_signed_in? %>
+  <div class="container">
 
         <h3>Favorites : <%= @count %></h3>
         <ul class="nav nav-list">
@@ -37,16 +53,9 @@
             <% end %>
           <% end %>
         </ul>
-	         
-	</div> <!-- /container -->
+           
+  </div> <!-- /container -->
 <% end%>
-
-
-<div class = "Menu">
-    <%= link_to 'Main Menu', languages_path %>
-    <%= button_to "Signout", destroy_user_session_path, method: :delete%>
-</div>
-
 <footer>
         <p>&copy; OneStopLearn 2016</p>
 </footer>
