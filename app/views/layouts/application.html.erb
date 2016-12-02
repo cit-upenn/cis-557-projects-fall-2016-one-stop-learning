@@ -20,6 +20,12 @@
 </head>
 <body>
 
+<div class = "Menu">
+    <%= link_to 'Main Menu', languages_path %>
+    <%= link_to 'Comments', comments_path %>
+    <%= button_to "Signout", destroy_user_session_path, method: :delete%>
+</div>
+
 <%= yield %>
 <% if user_signed_in? %>
 	<div class="container">
@@ -42,10 +48,6 @@
 <% end%>
 
 
-<div class = "Menu">
-    <%= link_to 'Main Menu', languages_path %>
-    <%= button_to "Signout", destroy_user_session_path, method: :delete%>
-</div>
 
 <footer>
         <p>&copy; OneStopLearn 2016</p>
