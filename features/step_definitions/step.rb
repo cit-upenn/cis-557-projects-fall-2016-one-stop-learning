@@ -214,7 +214,7 @@ When(/^I click on the Unfavorite button$/) do
 
 Then(/^the link should be removed from the Favorite Table$/) do
   assert UserFavorite.count.zero?
-endgit
+end
 
 
 # ----------------Login Page should not have Favorite Links----------------
@@ -356,4 +356,96 @@ Then(/^I should be able to see all the comments added by previous users$/) do
   # assert page.has_content?('Python scripts')
   # assert page.has_content?('user2@upenn.edu')
   
+end
+
+
+# ------------------------ Give feedback comment ----------------------------
+Given(/^I'm on the Feedback page$/) do
+  User.create(email: "rss@upenn.edu", encrypted_password: "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge")
+  visit(root_path)
+  fill_in 'Email', :with => 'rss@upenn.edu'
+  fill_in 'Password', :with => '12345678'
+  click_button('Log in')
+  visit(about_path)
+end
+
+When(/^I enter the feedback info$/) do
+  assert Feedback.count.zero?
+  fill_in 'comment', :with => 'Hello'
+  click_button('Submit')
+end
+
+Then(/^I should be able to see the success message$/) do
+  refute Feedback.count.zero?
+  assert page.has_content?("Thanks for your valuable feedback!!!")
+end
+
+
+
+# ------------------------ Favorite Videos Page ----------------------------
+# Given I'm on the Home page
+
+When(/^I click on the Favorites Link\/Button$/) do
+  click_link('Favorites')
+end
+
+Then(/^I should be able to see the Favorite Videos Page$/) do
+  assert page.has_content?("My Favorite Videos")
+end
+
+
+# ------------------------ Favorite Videos Links ----------------------------
+Given(/^I click a favorite button for a video$/) do
+  User.create(email: "rss@upenn.edu", encrypted_password: "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge")
+  Langopt.create(name: "Python")
+  visit(root_path)
+  fill_in 'Email', :with => 'rss@upenn.edu'
+  fill_in 'Password', :with => '12345678'
+  click_button('Log in')
+  select "Python", :from => "language_Langopt_id", :visible => false
+  click_button('Search')
+  click_button('favorite', match: :first)
+end
+
+When(/^I go the Favorite Videos Page$/) do
+  click_link('Favorites')
+end
+
+Then(/^I should be able to see that video$/) do
+  assert page.has_content?("My Favorite Videos")
+  refute UserFavorite.count.zero?
+  assert page.has_content?("Python : By Derek Banas")
+end
+
+
+# ------------------------ Add Blank URL ----------------------------
+Given(/^I'm on the Favorites page$/) do
+  User.create(email: "rss@upenn.edu", encrypted_password: "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge")
+  Langopt.create(name: "Python")
+  visit(root_path)
+  fill_in 'Email', :with => 'rss@upenn.edu'
+  fill_in 'Password', :with => '12345678'
+  click_button('Log in')
+  click_link('Favorites')
+end
+
+When(/^I click on the Add button$/) do
+  click_button('Add')
+end
+
+Then(/^I should be able to see the error notice\.$/) do
+  assert page.has_content?("Please enter a valid link.")
+end
+
+# ------------------------ Add Blank URL ----------------------------
+When(/^I the enter the URL information$/) do
+  assert UserFavorite.count.zero?
+  fill_in 'url', :with => 'https://www.youtube.com/watch?v=0yW7w8F2TVA'
+  fill_in 'lang', :with => 'Test'
+  click_button('Add')
+end
+
+Then(/^I should be able to see that video in the list\.$/) do
+  refute UserFavorite.count.zero?
+  assert page.has_content?("Test : By rss@upenn.edu")
 end
