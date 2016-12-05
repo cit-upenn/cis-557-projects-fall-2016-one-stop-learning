@@ -11,6 +11,7 @@ class FeedbacksController < ApplicationController
 
     respond_to do |format|
       if @feedback.save
+        SendMail.sample_email(params[:comment], current_user).deliver_now
         format.html { redirect_to about_path, notice: 'Thanks for your valuable feedback!!!' }
       end
     end
