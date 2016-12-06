@@ -2,7 +2,7 @@ class FeedbacksController < ApplicationController
 
 
   def index
-    @show = false
+    @show = true
   end
 
 

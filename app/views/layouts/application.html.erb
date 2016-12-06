@@ -2,63 +2,101 @@
 <html>
 <head>
   <title>Onestop</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/css/simple-sidebar.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <!-- Custom CSS -->
   <%= stylesheet_link_tag "application", media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 
   <style type="text/css">
+
+    body{
+      background-color: #EEEEEE
+    }
     
-    div.container {
-    position: absolute;
-    top: 100px;
-    right: 0px;
-    width: 250px;
-    height: 300px;
-    border: 1px solid blue;
-    align-content: right;
-}
+
+    #sidebar-wrapper{
+       margin-top: 50px;
+       color: #6C7477;
+       padding: 7px;
+    }
+    #page-content-wrapper {
+        padding-top: 50px;
+    }
+
+    .fav_buttons{
+      white-space: nowrap;
+    }
+    .navbar-btn{
+      margin: 10px;
+    }
+
+    #fav_buttons{
+      padding: 10px;
+      margin: 10px;
+    }
+
+
   </style>
 </head>
 <body>
-
-
+  <% if user_signed_in? %>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+           <div class="navbar-header">
+                <a class="navbar-brand">OneStop Learning</a>
+            </div>
+          <ul class="nav navbar-nav">
+            <li><%= link_to 'Main Menu', languages_path %></li>
+            <li><%= link_to 'Favorites', languages_favorite_path %></li>
+            <li><%= link_to 'Discussions', comments_path %></li>
+            <li><%= link_to 'About', about_path %></li>
+          </ul>
+          
+          <ul class="nav navbar-nav navbar-right">
+            <li class="navbar-text"><%= current_user.email %></li>
+            <li><%= button_to "Signout", destroy_user_session_path, method: :delete, :class => "btn navbar-btn"%></li>
+          </ul>
+        </div>
+      </nav>
+        <!-- Sidebar --> 
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <% if user_signed_in? %>
+                    <% if @show == true %>
+                      <div>
+                        <h4>Favorited videos: <%= @count %></h4>
+                        <ul class="nav nav-list">
+                          <% if @count != 0 %>
+                            <% @links.each do |f| %>
+                              <li>  
+                              <span>
+                              <%= f.language%> : 
+                              <a href = <%= f.url %> > <%= f.owner %> </a>
+                              </span>
+                              </li>
+                            <% end %>
+                          <% end %>
+                        </ul>
+                      </div> 
+                    <% end%>
+                  <% end%>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+  <% end%>
 <%- flash.each do |name, msg| -%>
     <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
 <%- end -%>
 
-<% if user_signed_in? %>
-  <div class = "Favorite">
-      <%= link_to 'Favorites', languages_favorite_path %>      
-  </div> 
-  <div class = "Menu">
-      <%= link_to 'Main Menu', languages_path %><br/>
-      <%= link_to 'About', about_path %>
-      <%= button_to "Signout", destroy_user_session_path, method: :delete%>
-  </div>
-<% end%>
-
 
 <%= yield %>
 
-<% if user_signed_in? %>
-  <% if @show == true %>
-    <div class="container" id="sidebar">
-      <h3>Favorites : <%= @count %></h3>
-      <ul class="nav nav-list">
-        <% if @count != 0 %>
-          <% @links.each do |f| %>
-            <li>  
-            <span>
-            <%= f.language%> : 
-            <a href = <%= f.url %> > <%= f.owner %> </a>
-            </span>
-            </li>
-          <% end %>
-        <% end %>
-      </ul>
-    </div> 
-  <% end%>
-<% end%>
+
 <footer>
         <p>&copy; OneStopLearn 2016</p>
 </footer>

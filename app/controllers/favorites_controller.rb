@@ -2,7 +2,7 @@ class FavoritesController < ApplicationController
 
 	def index
 		@fav = UserFavorite.where(user_id: current_user.id)
-		@show = false
+		@show = true
 	end
 
 
