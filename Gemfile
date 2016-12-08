@@ -49,23 +49,34 @@ gem 'closure_tree'
 # end
 
 # group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+#   # Access an IRB console on exception pages or by using <%= console %> in views
+#   gem 'web-console', '~> 2.0'
 # end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# group :development, :test do
+# group :development do
 #   gem 'cucumber-rails', :require => false
 #   gem 'cucumber-rails-training-wheels'
 #   gem 'database_cleaner'
 #   gem 'capybara'
 #   gem 'launchy'
 #   gem 'sqlite3'
-#   
+  
 # end
 
-# group :production do
-	gem 'pg'
+# group :test do
+#   gem 'cucumber-rails', :require => false
+#   gem 'cucumber-rails-training-wheels'
+#   gem 'database_cleaner'
+#   gem 'capybara'
+#   gem 'launchy'
+#   gem 'sqlite3'
+  
 # end
+
+
+group :production do
+	gem 'pg'
+end
