@@ -97,6 +97,10 @@ description: 'This video aims at teaching Java to absolute beginners. The
 explanations and images combined make up a great tutorial.', language: 'Java',
 owner: 'WEB Technology')
 
+Langopt.create(name: "Python")
+Langopt.create(name: "Java")
+Langopt.create(name: "Ruby")
+Langopt.create(name: "C++")
 
 
 
