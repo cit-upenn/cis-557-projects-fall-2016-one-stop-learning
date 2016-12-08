@@ -57,12 +57,12 @@ gem 'closure_tree'
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # group :development do
-#   gem 'cucumber-rails', :require => false
-#   gem 'cucumber-rails-training-wheels'
-#   gem 'database_cleaner'
-#   gem 'capybara'
-#   gem 'launchy'
-#   gem 'sqlite3'
+  # gem 'cucumber-rails', :require => false
+  # gem 'cucumber-rails-training-wheels'
+  # gem 'database_cleaner'
+  # gem 'capybara'
+  # gem 'launchy'
+  # gem 'sqlite3'
   
 # end
 
