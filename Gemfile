@@ -43,10 +43,10 @@ gem 'closure_tree'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# group :development, :test do
-#   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-#   gem 'byebug'
-# end
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug'
+end
 
 # group :development do
 #   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -56,25 +56,25 @@ gem 'closure_tree'
 # # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# group :development do
-#   gem 'cucumber-rails', :require => false
-#   gem 'cucumber-rails-training-wheels'
-#   gem 'database_cleaner'
-#   gem 'capybara'
-#   gem 'launchy'
-#   gem 'sqlite3'
+group :development do
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels'
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'sqlite3'
   
-# end
+end
 
-# group :test do
-#   gem 'cucumber-rails', :require => false
-#   gem 'cucumber-rails-training-wheels'
-#   gem 'database_cleaner'
-#   gem 'capybara'
-#   gem 'launchy'
-#   gem 'sqlite3'
+group :test do
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels'
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'sqlite3'
   
-# end
+end
 
 
 group :production do
