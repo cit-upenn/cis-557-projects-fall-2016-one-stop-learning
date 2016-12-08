@@ -15,9 +15,14 @@
   <style type="text/css">
 
     body{
-      background-color: #EEEEEE
+      background-color: #EEEEEE;
     }
     
+    body.bk{
+      background-image: url(https://wallpaperscraft.com/image/computer_keyboard_mouse_laptop_mac_apple_66734_1920x1080.jpg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
 
     #sidebar-wrapper{
        margin-top: 50px;
@@ -25,7 +30,7 @@
        padding: 7px;
     }
     #page-content-wrapper {
-        padding-top: 50px;
+      padding-top: 50px;
     }
 
     .fav_buttons{
@@ -40,6 +45,25 @@
       margin: 10px;
     }
 
+    .footer{
+      position: fixed;
+      bottom: 0;
+    }
+
+    .heading{
+      padding: 10px;
+    }
+
+    .field{
+      padding: 10px;
+    }
+
+    .wrapper{
+
+    }
+    .welcome-page{
+      margin-top: 100px;
+    }
 
   </style>
 </head>
@@ -69,7 +93,7 @@
                 <% if user_signed_in? %>
                     <% if @show == true %>
                       <div>
-                        <h4>Favorited videos: <%= @count %></h4>
+                        <h4 class="heading">Favorited videos: <%= @count %></h4>
                         <ul class="nav nav-list">
                           <% if @count != 0 %>
                             <% @links.each do |f| %>
@@ -82,12 +106,16 @@
                             <% end %>
                           <% end %>
                         </ul>
+                         <li class="footer"><p>&copy; OneStopLearn 2016</p></li>
                       </div> 
                     <% end%>
                   <% end%>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
+        <div class="footer">
+                    
+            </div>
   <% end%>
 <%- flash.each do |name, msg| -%>
     <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
@@ -96,9 +124,5 @@
 
 <%= yield %>
 
-
-<footer>
-        <p>&copy; OneStopLearn 2016</p>
-</footer>
 </body>
 </html>
