@@ -48,10 +48,10 @@ gem 'closure_tree'
 #   gem 'byebug'
 # end
 
-group :development do
+# group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-end
+# end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
@@ -66,6 +66,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #   
 # end
 
-group :production do
+# group :production do
 	gem 'pg'
-end
+# end
