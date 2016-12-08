@@ -30,6 +30,7 @@ gem 'autoprefixer-rails'
 gem 'devise', '~> 3.4'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'certified'
 gem 'closure_tree'
 
 
@@ -62,7 +63,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #   gem 'capybara'
 #   gem 'launchy'
 #   gem 'sqlite3'
-#   gem 'certified'
+#   
 # end
 
 group :production do
