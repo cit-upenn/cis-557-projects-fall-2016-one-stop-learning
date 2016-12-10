@@ -1,19 +1,9 @@
-  <div id="wrapper">
-   <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1>Add comment</h1>
-							<% if @comment.parent %>
-							  <%= render 'comment', comment: @comment.parent, from_reply_form: true %>
-							<% end %>
 
-							<%= render 'form' %>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /#page-content-wrapper -->
-   </div>
+<h1>Add comment</h1>
+<% if @comment.parent %>
+  <%= render 'comment', comment: @comment.parent, from_reply_form: true %>
+<% end %>
+
+<%= render 'form' %>
+                   
 

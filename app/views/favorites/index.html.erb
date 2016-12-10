@@ -9,40 +9,28 @@
 </head>
 <body>
 
- <div id="wrapper">
-   <!-- Page Content -->
-        <div id="page-content-wrapper" >
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h2>Favorite Videos</h2>
-                        <ul>
-                          <% @fav.each do |f| %>
-                            <li> <h4><%= f.language%> : By <%= f.owner%></h4>
-                            <%= button_to "unfavorite", languages_favorite_path(url: f.url, owner: f.owner, type: "unfavorite"), method: :post, :class => "btn" %>
-                            <iframe width="520" height="285"
-                              src= <%=f.url %> >
-                            </iframe>
-                            </li>
-                         <% end %>
-                        </ul>
-                        <h2>My Favorite Videos</h2>
-                        <div class = "Youtube">
-                          <span>Add Your Favorite Youtube Link(URL)</span>
-                          <%= form_tag :controller => "favorites", :action => "add", :method => 'post' do %>
-                            <label>URL</label>
-                            <%= text_field_tag(:url) %>
-                            <label>Language</label>
-                            <%= text_field_tag(:lang) %>
-                            <%= submit_tag("Add", :class => "btn") %>
-                          <% end %>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /#page-content-wrapper -->
-   </div>
-
-
+ 
+  <h2>Favorite Videos</h2>
+  <ul>
+    <% @fav.each do |f| %>
+      <li> <h4><%= f.language%> : By <%= f.owner%></h4>
+      <%= button_to "unfavorite", languages_favorite_path(url: f.url, owner: f.owner, type: "unfavorite"), method: :post, :class => "btn" %>
+      <iframe width="520" height="285"
+        src= <%=f.url %> >
+      </iframe>
+      </li>
+   <% end %>
+  </ul>
+  <h2>My Favorite Videos</h2>
+  <div class = "Youtube">
+    <span>Add Your Favorite Youtube Link(URL)</span>
+    <%= form_tag :controller => "favorites", :action => "add", :method => 'post' do %>
+      <label>URL</label>
+      <%= text_field_tag(:url) %>
+      <label>Language</label>
+      <%= text_field_tag(:lang) %>
+      <%= submit_tag("Add", :class => "btn") %>
+    <% end %>
+  </div>
+                    
 </body>

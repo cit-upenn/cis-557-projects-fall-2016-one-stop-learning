@@ -19,7 +19,7 @@
     }
     
     body.bk{
-      background-image: url(https://wallpaperscraft.com/image/computer_keyboard_mouse_laptop_mac_apple_66734_1920x1080.jpg);
+      background-image: url('assets/background.jpg');
       background-size: 100%;
       background-repeat: no-repeat;
     }
@@ -29,9 +29,7 @@
        color: #6C7477;
        padding: 7px;
     }
-    #page-content-wrapper {
-      padding-top: 50px;
-    }
+   
 
     .fav_buttons{
       white-space: nowrap;
@@ -117,12 +115,23 @@
                     
             </div>
   <% end%>
-<%- flash.each do |name, msg| -%>
-    <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
-<%- end -%>
 
-
-<%= yield %>
+  <div id="wrapper">
+<!-- Page Content -->
+  <div id="page-content-wrapper">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-lg-12 welcome-page">
+                 <%- flash.each do |name, msg| -%>
+                      <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+                  <%- end -%>
+                  <%= yield %>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+</div>
 
 </body>
 </html>
