@@ -22,9 +22,9 @@ class LanguagesController < ApplicationController
 		when "1"
 			redirect_to languages_python_path
 		when "2"
-			redirect_to languages_ruby_path
-		when "3"
 			redirect_to languages_java_path
+		when "3"
+			redirect_to languages_ruby_path
 		when "4"
 			redirect_to languages_cpp_path
 		else
