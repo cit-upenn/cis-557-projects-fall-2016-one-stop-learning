@@ -14,11 +14,11 @@
   <ul>
     <% @fav.each do |f| %>
       <li> <h4><%= f.language%> : By <%= f.owner%></h4>
-      <%= button_to "unfavorite", languages_favorite_path(url: f.url, owner: f.owner, type: "unfavorite"), method: :post, :class => "btn" %>
+      <%= button_to "unfavorite", languages_favorite_path(url: f.url, owner: f.owner, type: "unfavorite"), method: :post, :class => "btn" %><br>
       <iframe width="520" height="285"
         src= <%=f.url %> >
       </iframe>
-      </li>
+      </li><br><br>
    <% end %>
   </ul>
   <h2>My Favorite Videos</h2>
@@ -29,7 +29,7 @@
       <%= text_field_tag(:url) %>
       <label>Language</label>
       <%= text_field_tag(:lang) %>
-      <%= submit_tag("Add", :class => "btn") %>
+      <%= submit_tag("Add", :class => "btn btn-primary") %>
     <% end %>
   </div>
                     
