@@ -4,6 +4,8 @@
 # City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }]) #
 # Mayor.create(name: 'Emanuel', city: cities.first) 
 Favorite.destroy_all
+Langopt.destroy_all
+Pythonquiz.destroy_all
 #-------------------------Python---------------------------------------------#
 Favorite.create(url:
 'https://www.youtube.com/embed/N4mEzFDjqtA?controls=1', description: 'This
@@ -108,7 +110,10 @@ Pythonquiz.create(question: "3)	What is the output of print list[2:] if list = [
 Pythonquiz.create(question: "4)	What is the output of the following?print('{:,}'.format(1112223334))" ,ans1:"1,112,223,334",ans2:"111,222,333,4",ans3:"1112223334",ans4:"error",correctAns:"1")
 Pythonquiz.create(question: "5) Which of the following creates a pattern object?" ,ans1:"re.create(str)",ans2:"re.regex(str)",ans3:"re.compiler(str)",ans4:"re.assemble(str)",correctAns:"3")
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> favorites_new
 
 
 
