@@ -1,20 +1,10 @@
 class LanguagesController < ApplicationController
 	before_action :authenticate_user!
 
-	# def index
-	# end
+	
 
 	def select
-		# render plain: params[:language][:Langopt_id].inspect
-				
-		# Langopt.all do |l|
-		# 	if params[:language][:Langopt_id] == l['id'].to_s
-		# 		@path = 'languages_#{l["name"].downcase}_path'
-		# 		# redirect_to @path
-		# 		render plain: @path
-		# 		break
-		# 	end
-		# end
+		
 		@val = params[:language][:Langopt_id]
 				
 
