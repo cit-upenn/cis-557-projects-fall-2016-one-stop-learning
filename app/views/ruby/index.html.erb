@@ -3,34 +3,30 @@
   <title>Ruby</title>
 </head>
 <body>
+ 
+  <div class = "text-center">
+    <h2>Ruby</h2>
+  </div>
+  <h3>Video Tutorials</h3>
+  <ul>
+      <% @favorites.each do |f| %>
+        <li> <h4>By <%= f.owner %></h4>
+        <div id="fav_buttons">
+          <%= button_to("favorite",   languages_ruby_path(url: f.url, owner: f.owner, lang: f.language , type: "favorite"), method: :post, :class => "btn btn-primary") %>
+          <%= button_to("unfavorite", languages_ruby_path(url: f.url, owner: f.owner, lang: f.language , type: "unfavorite"), method: :post, :class => "btn")%>
+        </div>
+        <iframe width="520" height="285" allowfullscreen="allowfullscreen" 
+          src= <%=f.url %> >
+        </iframe>
+        <p><b>Description</b></p>
+        <p><%= f.description %></p>
+      </li>
+     <% end %>
+  </ul>
+  <h3>Official Documentation</h3>
+    <a role='button' class='btn btn-primary' href = "http://ruby-doc.org/">Documentation</a> <br>
+  <h3>Test your knowledge</h3>
+  <%= link_to 'Quiz', {:controller => "rubyquizzes", :action => "answering" , :id => "1"}, :role => 'button' ,:class =>'btn btn-primary'%>
 
-	
-
-<p id="notice"><%= notice %></p>
-<h1>Onestop Learning</h1>
-<h2>Ruby</h2>
-<h3>Video Tutorials</h3>
-<ul>
-    <% @favorites.each do |f| %>
-      <li> <h4>By <%= f.owner%></h4>
-      <span>
-        <%= button_to "favorite",   languages_ruby_path(url: f.url, owner: f.owner, lang: f.language , type: "favorite"), method: :post %>
-        <%= button_to "unfavorite", languages_ruby_path(url: f.url, owner: f.owner, lang: f.language , type: "unfavorite"), method: :post %>
-      </span>
-      <iframe width="400" height="300"
-        src= <%=f.url %> >
-      </iframe>
-      <p><b>Description</b></p>
-      <p><%= f.description %></p>
-    </li>
-   <% end %>
-</ul>
-<h3>Official Documentation</h3>
-	<a id = "doc" href = "http://ruby-doc.org/">Documentation</a>
-	<br>
-	<%= link_to 'Quiz', {:controller => "rubyquizzes", :action => "answering" , :id => "1"}%><br>
-	
-	<div class = "Back">
-		<%= link_to 'Back', languages_path %>
-	</div>
 </body>
+

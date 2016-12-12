@@ -1,27 +1,21 @@
-<p id = notice> <%= notice %> </p>
 <h1 class="text-center">Quiz on Python</h1>
 <% @quizz.each do |a|%>
-<b><%=h a.question%></b>
+<b><%=h a.question%></b><br><br>
 <p>
-<b>1.</b>
-<b><%=h a.ans1%></b>
+1.<%=h a.ans1%>
+<p>
+2.<%=h a.ans2%>
+</p>
+3.<%=h a.ans3%>
 </p>
 <p>
-<b>2.</b>
-<b><%=h a.ans2%></b>
-</p>
-<b>3.</b>
-<b><%=h a.ans3%></b>
-</p>
-<p>
-<b>4.</b>
-<b><%=h a.ans4%></b>
+4.<%=h a.ans4%>
 </p>
 <%=form_tag(:action => "check", :id => a.id) do %>
 <p>
-<b>The correct answer is number:</b>
+The correct answer is number:
 <%=text_field :ans ,params[:ans]%>
 </p>
-<p><%=submit_tag("check")%></p>
+<p><%=submit_tag("check", :class => 'btn btn-primary')%></p><br><br>
 <%end%>
 <%end%>

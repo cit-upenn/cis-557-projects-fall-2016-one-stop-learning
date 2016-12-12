@@ -73,7 +73,7 @@ class PythonquizzesController < ApplicationController
       format.html { redirect_to answering_pythonquizzes_path}
       format.json { head :ok }
     else
-      flash[:notice] = "Wrong Answer"
+      flash[:wrong] = "Wrong Answer"
       format.html { redirect_to answering_pythonquizzes_path}
       format.json { head :ok }
 end

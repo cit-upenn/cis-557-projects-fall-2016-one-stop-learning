@@ -73,7 +73,7 @@ class CppquizzesController < ApplicationController
       format.html { redirect_to answering_cppquizzes_path}
       format.json { head :ok }
     else
-      flash[:notice] = "Wrong Answer"
+      flash[:wrong] = "Wrong Answer"
       format.html { redirect_to answering_cppquizzes_path}
       format.json { head :ok }
 end

@@ -73,7 +73,7 @@ class JavaquizzesController < ApplicationController
       format.html { redirect_to answering_javaquizzes_path}
       format.json { head :ok }
     else
-      flash[:notice] = "Wrong Answer"
+      flash[:wrong] = "Wrong Answer"
       format.html { redirect_to answering_javaquizzes_path}
       format.json { head :ok }
 end
