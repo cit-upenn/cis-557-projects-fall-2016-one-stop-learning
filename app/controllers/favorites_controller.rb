@@ -19,11 +19,13 @@ class FavoritesController < ApplicationController
 				@new = UserFavorite.new(user_id: current_user.id, url: new_url, owner: current_user.email, language: params[:lang])
 				respond_to do |format|
 				      		if @new.save
-				       			 format.html { redirect_to languages_favorite_path}
+				      			flash[:notice] = 'Video Successfully Added!'
+				       			 format.html { redirect_to languages_favorite_path }
 							end
 						end
 					else
-						redirect_to languages_favorite_path, notice: 'Please enter a valid link.'
+						flash[:wrong] ='Please enter a valid link.'
+						redirect_to languages_favorite_path
 					end
 		end
 	end

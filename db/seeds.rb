@@ -4,6 +4,8 @@
 # City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }]) #
 # Mayor.create(name: 'Emanuel', city: cities.first) 
 Favorite.destroy_all
+Langopt.destroy_all
+Pythonquiz.destroy_all
 #-------------------------Python---------------------------------------------#
 Favorite.create(url:
 'https://www.youtube.com/embed/N4mEzFDjqtA?controls=1', description: 'This
@@ -101,6 +103,12 @@ Langopt.create(name: "Python")
 Langopt.create(name: "Java")
 Langopt.create(name: "Ruby")
 Langopt.create(name: "C++")
+
+Pythonquiz.create(question: "1)Which of the following function of dictionary gets all the values from the dictionary?",ans1:"getvalues()",ans2:"value()",ans3:"- values()",ans4:"None of the above.",correctAns:"3")
+Pythonquiz.create(question: "2)Which of the following function convert an integer to a character in python?" ,ans1:"set(x)",ans2:"dict(d)",ans3:"frozenset(s)",ans4:"chr(x)",correctAns:"4")
+Pythonquiz.create(question: "3)	What is the output of print list[2:] if list = [ 'abcd', 786 , 2.23, 'john', 70.2 ]?" ,ans1:"[ 'abcd', 786 , 2.23, 'john', 70.2 ]",ans2:"abcd",ans3:"[786, 2.23]",ans4:"[2.23, 'john', 70.2]",correctAns:"4")
+Pythonquiz.create(question: "4)	What is the output of the following?print('{:,}'.format(1112223334))" ,ans1:"1,112,223,334",ans2:"111,222,333,4",ans3:"1112223334",ans4:"error",correctAns:"1")
+Pythonquiz.create(question: "5) Which of the following creates a pattern object?" ,ans1:"re.create(str)",ans2:"re.regex(str)",ans3:"re.compiler(str)",ans4:"re.assemble(str)",correctAns:"3")
 
 
 
