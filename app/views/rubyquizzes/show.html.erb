@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @rubyquiz.question %>
+</p>
+
+<p>
+  <strong>Ans1:</strong>
+  <%= @rubyquiz.ans1 %>
+</p>
+
+<p>
+  <strong>Ans2:</strong>
+  <%= @rubyquiz.ans2 %>
+</p>
+
+<p>
+  <strong>Ans3:</strong>
+  <%= @rubyquiz.ans3 %>
+</p>
+
+<p>
+  <strong>Ans4:</strong>
+  <%= @rubyquiz.ans4 %>
+</p>
+
+<p>
+  <strong>Correctans:</strong>
+  <%= @rubyquiz.correctAns %>
+</p>
+
+<%= link_to 'Edit', edit_rubyquiz_path(@rubyquiz) %> |
+<%= link_to 'Back', rubyquizzes_path %>

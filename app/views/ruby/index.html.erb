@@ -1,19 +1,36 @@
 <!DOCTYPE html>
 <head>
-	<title>Ruby</title>
+  <title>Ruby</title>
 </head>
 <body>
-	<h1>Onestop Learn</h1>
-	<h2>Ruby</h2>
-	<h3>Video Tutorial</h3>
-	<ul>
-	<li><a id = "link1" href = "https://www.youtube.com/watch?v=Dji9ALCgfpM">Link1</a></li>
-	<li><a id = "link2" href = "https://www.youtube.com/watch?v=8I539U5lXWY&list=PLMK2xMz5H5Zv8eC8b4K6tMaE1-Z9FgSOp">Link2</a></li>
-	<li><a id = "link3" href = "https://www.youtube.com/watch?v=SHzeVBrW_rA&list=PLlxmoA0rQ-Lx45j3D6da7-Iqvo5wtjKBm">Link3</a></li>
-	</ul>
-	<h3>Official Documentation</h3>
+
+	
+
+<p id="notice"><%= notice %></p>
+<h1>Onestop Learning</h1>
+<h2>Ruby</h2>
+<h3>Video Tutorials</h3>
+<ul>
+    <% @favorites.each do |f| %>
+      <li> <h4>By <%= f.owner%></h4>
+      <span>
+        <%= button_to "favorite",   languages_ruby_path(url: f.url, owner: f.owner, lang: f.language , type: "favorite"), method: :post %>
+        <%= button_to "unfavorite", languages_ruby_path(url: f.url, owner: f.owner, lang: f.language , type: "unfavorite"), method: :post %>
+      </span>
+      <iframe width="400" height="300"
+        src= <%=f.url %> >
+      </iframe>
+      <p><b>Description</b></p>
+      <p><%= f.description %></p>
+    </li>
+   <% end %>
+</ul>
+<h3>Official Documentation</h3>
 	<a id = "doc" href = "http://ruby-doc.org/">Documentation</a>
+	<br>
+	<%= link_to 'Quiz', {:controller => "rubyquizzes", :action => "answering" , :id => "1"}%><br>
+	
 	<div class = "Back">
-	<%= link_to 'Back', languages_path %>
+		<%= link_to 'Back', languages_path %>
 	</div>
 </body>

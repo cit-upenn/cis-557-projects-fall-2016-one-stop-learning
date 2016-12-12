@@ -1,0 +1,1 @@
+json.array! @rubyquizzes, partial: 'rubyquizzes/rubyquiz', as: :rubyquiz

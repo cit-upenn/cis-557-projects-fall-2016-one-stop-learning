@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @javaquiz.question %>
+</p>
+
+<p>
+  <strong>Ans1:</strong>
+  <%= @javaquiz.ans1 %>
+</p>
+
+<p>
+  <strong>Ans2:</strong>
+  <%= @javaquiz.ans2 %>
+</p>
+
+<p>
+  <strong>Ans3:</strong>
+  <%= @javaquiz.ans3 %>
+</p>
+
+<p>
+  <strong>Ans4:</strong>
+  <%= @javaquiz.ans4 %>
+</p>
+
+<p>
+  <strong>Correctans:</strong>
+  <%= @javaquiz.correctAns %>
+</p>
+
+<%= link_to 'Edit', edit_javaquiz_path(@javaquiz) %> |
+<%= link_to 'Back', javaquizzes_path %>

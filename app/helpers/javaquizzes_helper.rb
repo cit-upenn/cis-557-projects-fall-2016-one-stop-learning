@@ -1,0 +1,2 @@
+module JavaquizzesHelper
+end

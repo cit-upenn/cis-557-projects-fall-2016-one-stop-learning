@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <head>
-	<title>C++</title>
+  <title>C++</title>
 </head>
 <body>
- 	<h1>Onestop Learn</h1>
-	<h2>C++</h2>
-	<h3>Video Tutorial</h3>
-	<ul>
-	<li><a id = "link1" href = "https://www.youtube.com/watch?v=Rub-JsjMhWY">Link1</a></li>
-	<li><a id = "link2" href = "https://www.youtube.com/watch?v=S3t-5UtvDN0">Link2</a></li>
-	<li><a id = "link3" href = "https://www.youtube.com/watch?v=-WwGMNGRHdw">Link3</a></li>
-	</ul>
-	<h3>Official Documentation</h3>
-	<a id = "doc" href = "http://devdocs.io/cpp/">Documentation</a>
+ 
+  <p id="notice"><%= notice %></p>
+  <div class = "text-center">
+    <h2>C++</h2>
+  </div>
+  <h3>Video Tutorials</h3>
+  <ul>
+      <% @favorites.each do |f| %>
+        <li> <h4>By <%= f.owner %></h4>
+        <div id="fav_buttons">
+          <%= button_to "favorite",   languages_cpp_path(url: f.url, owner: f.owner, lang: f.language , type: "favorite"), method: :post, :class => "btn btn-primary" %>
+          <%= button_to "unfavorite", languages_cpp_path(url: f.url, owner: f.owner, lang: f.language , type: "unfavorite"), method: :post, :class => "btn" %>
+        </div>
+        <iframe width="520" height="285" allowfullscreen="allowfullscreen" 
+          src= <%=f.url %> >
+        </iframe>
+        <p><b>Description</b></p>
+        <p><%= f.description %></p>
+      </li>
+     <% end %>
+  </ul>
+  <h3>Official Documentation</h3>
+    <a id = "doc" href = "http://devdocs.io/cpp/">Documentation</a> <br>
+  <h3>Test your knowledge</h3>
+  <%= link_to 'Quiz', {:controller => "cppquizzes", :action => "answering" , :id => "1"}%>
 
-	<div class = "Back">
-	<%= link_to 'Back', languages_path %>
-	</div>
 </body>

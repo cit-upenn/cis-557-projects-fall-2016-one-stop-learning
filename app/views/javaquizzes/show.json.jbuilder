@@ -1,0 +1,1 @@
+json.partial! "javaquizzes/javaquiz", javaquiz: @javaquiz
