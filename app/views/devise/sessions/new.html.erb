@@ -1,7 +1,8 @@
-<body id="back_ground">
+<body id='back_ground'>
+  <h1>OneStop Learning</h1>
   <div id='logbox'>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class='row'>
+    <div class='row text-center'>
       <div class="field col-xs-3">
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true, :id => "inputEmail", :class => "form-control", :placeholder => "Email address"%>
