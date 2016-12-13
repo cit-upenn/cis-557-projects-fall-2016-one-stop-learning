@@ -6,6 +6,9 @@
 Favorite.destroy_all
 Langopt.destroy_all
 Pythonquiz.destroy_all
+Javaquiz.destroy_all
+Rubyquiz.destroy_all
+Cppquiz.destroy_all
 #-------------------------Python---------------------------------------------#
 Favorite.create(url:
 'https://www.youtube.com/embed/N4mEzFDjqtA?controls=1', description: 'This
@@ -104,17 +107,18 @@ Langopt.create(name: "Java")
 Langopt.create(name: "Ruby")
 Langopt.create(name: "C++")
 
-Pythonquiz.create(question: "1)Which of the following function of dictionary gets all the values from the dictionary?",ans1:"getvalues()",ans2:"value()",ans3:"- values()",ans4:"None of the above.",correctAns:"3")
-Pythonquiz.create(question: "2)Which of the following function convert an integer to a character in python?" ,ans1:"set(x)",ans2:"dict(d)",ans3:"frozenset(s)",ans4:"chr(x)",correctAns:"4")
+Pythonquiz.create(question: "1) Which of the following function of dictionary gets all the values from the dictionary?",ans1:"getvalues()",ans2:"value()",ans3:"- values()",ans4:"None of the above.",correctAns:"3")
+Pythonquiz.create(question: "2) Which of the following function convert an integer to a character in python?" ,ans1:"set(x)",ans2:"dict(d)",ans3:"frozenset(s)",ans4:"chr(x)",correctAns:"4")
 Pythonquiz.create(question: "3)	What is the output of print list[2:] if list = [ 'abcd', 786 , 2.23, 'john', 70.2 ]?" ,ans1:"[ 'abcd', 786 , 2.23, 'john', 70.2 ]",ans2:"abcd",ans3:"[786, 2.23]",ans4:"[2.23, 'john', 70.2]",correctAns:"4")
 Pythonquiz.create(question: "4)	What is the output of the following?print('{:,}'.format(1112223334))" ,ans1:"1,112,223,334",ans2:"111,222,333,4",ans3:"1112223334",ans4:"error",correctAns:"1")
 Pythonquiz.create(question: "5) Which of the following creates a pattern object?" ,ans1:"re.create(str)",ans2:"re.regex(str)",ans3:"re.compiler(str)",ans4:"re.assemble(str)",correctAns:"3")
 
-<<<<<<< HEAD
 
-=======
->>>>>>> favorites_new
-
+Javaquiz.create(question: "1) Which of the following is true about String?",ans1:"String is mutable",ans2:"String is immutable",ans3:"String is a data type",ans4:"None of the above.",correctAns:"2")
+Javaquiz.create(question: "2) What is the size of long variable?" ,ans1:"8 bit",ans2:"16 bit",ans3:"32 bit",ans4:"64 bit",correctAns:"4")
+Javaquiz.create(question: "3) What are Wrapper classes?" ,ans1:"These are classes that allow primitive types to be accessed as objects",ans2:"These are classes that wraps functionality of an existing class",ans3:"Both of the above",ans4:"None of the above",correctAns:"1")
+Javaquiz.create(question: "4) When does finally block get executed?" ,ans1:"Always when try block gets executed, no matter exception occured or not",ans2:"Always when a method gets executed, no matter exception occured or not",ans3:"Always when a try block gets executed, if exception do not occur",ans4:"Only when exception occurs in try block code",correctAns:"1")
+Javaquiz.create(question: "5) Which of the following is not a keyword in java?" ,ans1:"static",ans2:"Boolean",ans3:"void",ans4:"private",correctAns:"2")
 
 
 
