@@ -34,6 +34,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 
+gem 'newrelic_rpm'
+
 
 gem 'devise', '~> 3.4'
 gem 'omniauth'
