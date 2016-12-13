@@ -27020,3 +27020,515 @@ Processing by FavoritesController#index as HTML
 Completed 200 OK in 14ms (Views: 9.7ms | ActiveRecord: 0.5ms)
   [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "user_favorites"
   [1m[36m (10.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mFavorite Load (0.5ms)[0m  SELECT "favorites".* FROM "favorites"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  DELETE FROM "favorites" WHERE "favorites"."id" = ?  [["id", 925]]
+  [1m[36m (183.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 926]]
+  [1m[35m (122.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "favorites" WHERE "favorites"."id" = ?  [["id", 927]]
+  [1m[36m (144.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.5ms)[0m  [1mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 928]]
+  [1m[35m (109.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  DELETE FROM "favorites" WHERE "favorites"."id" = ?  [["id", 929]]
+  [1m[36m (121.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (34.3ms)[0m  [1mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 930]]
+  [1m[35m (68.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  DELETE FROM "favorites" WHERE "favorites"."id" = ?  [["id", 931]]
+  [1m[36m (146.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (3.5ms)[0m  [1mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 932]]
+  [1m[35m (91.1ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "favorites" WHERE "favorites"."id" = ?  [["id", 933]]
+  [1m[36m (163.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (3.5ms)[0m  [1mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 934]]
+  [1m[35m (112.9ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  DELETE FROM "favorites" WHERE "favorites"."id" = ?  [["id", 935]]
+  [1m[36m (83.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 936]]
+  [1m[35m (83.9ms)[0m  commit transaction
+  [1m[36mLangopt Load (0.5ms)[0m  [1mSELECT "langopts".* FROM "langopts"[0m
+  [1m[35mPythonquiz Load (0.5ms)[0m  SELECT "pythonquizzes".* FROM "pythonquizzes"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["url", "https://www.youtube.com/embed/N4mEzFDjqtA?controls=1"], ["description", "This\nvideo covers modules, comments, print, arithmetic operators, order of\noperation, lists, tuples, dictionaries, conditional operators, logical\noperators, if, else, elif, loops, for, while, break, continue, functions,\nreturn, readline(), string operators, file i/o, classes, objects and much\nmore."], ["language", "Python"], ["owner", "Derek Banas"], ["created_at", "2016-12-13 00:42:13.552213"], ["updated_at", "2016-12-13 00:42:13.552213"]]
+  [1m[36m (77.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["url", "https://www.youtube.com/embed/cpPG0bKHYKc?controls=1"], ["description", "This Python Programming Tutorial covers the instillation python and\nsetting up the python development environment. This video covers\nsetting up a system variable for using python from the windows command\nprompt and also covers using python from the built in IDLE IDE. After\nsetting up the development an environment this video demonstrates how\nto create and run your first python script (Hello World).This video\nseries is ideal for individuals looking to learn their\nfirst programming language or individuals looking to learn python\nas another programming language."], ["language", "Python"], ["owner", "onestopprogramming"], ["created_at", "2016-12-13 00:42:13.635507"], ["updated_at", "2016-12-13 00:42:13.635507"]]
+  [1m[35m (69.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["url", "https://www.youtube.com/embed/4Mf0h3HphEA?controls=1"], ["description", "This series assumes zero prior knowledge of programming and will\nleave you with a firm grasp of the language. The instructor strikes a really\ngreat balance between being funny while also being easy to listen."], ["language", "Python"], ["owner", "thenewboston"], ["created_at", "2016-12-13 00:42:13.712179"], ["updated_at", "2016-12-13 00:42:13.712179"]]
+  [1m[36m (69.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["url", "https://www.youtube.com/embed/Dji9ALCgfpM?controls=1"], ["description", "This video is a perfect revision lecture and covers most of the\nfundamentals. The length and the pacing of information  mades it really good\nas a preview."], ["language", "Ruby"], ["owner", "Derek Banas"], ["created_at", "2016-12-13 00:42:13.785805"], ["updated_at", "2016-12-13 00:42:13.785805"]]
+  [1m[35m (76.0ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["url", "https://www.youtube.com/embed/8I539U5lXWY?controls=1"], ["description", "This video series is ideal for beginners and covers all the\nbasic concepts in-depth."], ["language", "Ruby"], ["owner", "Jake Day Williams"], ["created_at", "2016-12-13 00:42:13.864747"], ["updated_at", "2016-12-13 00:42:13.864747"]]
+  [1m[36m (77.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["url", "https://www.youtube.com/embed/Dji9ALCgfpM?controls=1"], ["description", "Good tutorial for the freshers. Every concept is explained very\nclearly and even a viewer who doesn't know anything about coding can also\nunderstand it easily."], ["language", "Ruby"], ["owner", "Smartherd"], ["created_at", "2016-12-13 00:42:13.946262"], ["updated_at", "2016-12-13 00:42:13.946262"]]
+  [1m[35m (69.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["url", "https://www.youtube.com/embed/Rub-JsjMhWY?controls=1"], ["description", "This video is a great refresher course and covers datatypes,\narithmetic operations, if statement, switch statement, ternary operator,\narrays, for loop, while loop, do while loop, how to obtain user input,\nstrings, vectors, functions, recursive functions, exception handling,\npointers, reference operator, classes / objects, static variables and\nfunctions, constructors, inheritance, virtual methods, polymorphism and\nabstract data type."], ["language", "C++"], ["owner", "Derek Banas"], ["created_at", "2016-12-13 00:42:14.019932"], ["updated_at", "2016-12-13 00:42:14.019932"]]
+  [1m[36m (61.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["url", "https://www.youtube.com/embed/S3t-5UtvDN0?controls=1"], ["description", "This video series is ideal for beginners looking to learn C++ as\nit assumes zero prior knowledge of programming."], ["language", "C++"], ["owner", "Programming Tutorials"], ["created_at", "2016-12-13 00:42:14.085656"], ["updated_at", "2016-12-13 00:42:14.085656"]]
+  [1m[35m (74.6ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.5ms)[0m  INSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["url", "https://www.youtube.com/embed/-WwGMNGRHdw?controls=1"], ["description", "This series covers the fundamentals of C++. Has great content\nand goes at an appropriate pace such that all the views irrespective of their\nbackground can follow it easily."], ["language", "C++"], ["owner", "Anurag Verma"], ["created_at", "2016-12-13 00:42:14.166637"], ["updated_at", "2016-12-13 00:42:14.166637"]]
+  [1m[36m (90.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["url", "https://www.youtube.com/embed/WPvGqX-TXP0?controls=1"], ["description", "This Java programming Tutorial teachs you all of the core\nknowledge needed to write Java code in 30 minutes. It specifically covers the\nfollowing topics: primitive data types, comments, class, import, Scanner,\nfinal, Strings, static, private, protected, public, constructors, math,\nhasNextLine, nextLine, getters, setters, method overloading, Random, casting,\ntoString, conversion from Strings to primitives, converting from primitives to\nStrings, if, else, else if, print, println, printf, logical operators,\ncomparison operators, ternary operator, switch, for, while, break, continue,\ndo while, polymorphism, arrays, for each, multidimensional arrays and more."], ["language", "Java"], ["owner", "Derek Banas"], ["created_at", "2016-12-13 00:42:14.267561"], ["updated_at", "2016-12-13 00:42:14.267561"]]
+  [1m[35m (115.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["url", "https://www.youtube.com/embed/Cfd9DOnuF9w?controls=1"], ["description", "This series covers the basic concepts of Java. The instructor\nprovides great explanation and makes the concepts easy to follow and\nunderstand."], ["language", "Java"], ["owner", "Software Tutorials"], ["created_at", "2016-12-13 00:42:14.392285"], ["updated_at", "2016-12-13 00:42:14.392285"]]
+  [1m[36m (159.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["url", "https://www.youtube.com/embed/RGcDksxiyJo?controls=1"], ["description", "This video aims at teaching Java to absolute beginners. The\nexplanations and images combined make up a great tutorial."], ["language", "Java"], ["owner", "WEB Technology"], ["created_at", "2016-12-13 00:42:14.555601"], ["updated_at", "2016-12-13 00:42:14.555601"]]
+  [1m[35m (144.0ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Python"], ["created_at", "2016-12-13 00:42:14.718661"], ["updated_at", "2016-12-13 00:42:14.718661"]]
+  [1m[36m (73.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Java"], ["created_at", "2016-12-13 00:42:14.798263"], ["updated_at", "2016-12-13 00:42:14.798263"]]
+  [1m[35m (70.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Ruby"], ["created_at", "2016-12-13 00:42:14.872461"], ["updated_at", "2016-12-13 00:42:14.872461"]]
+  [1m[36m (72.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (2.5ms)[0m  [1mINSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "C++"], ["created_at", "2016-12-13 00:42:14.949723"], ["updated_at", "2016-12-13 00:42:14.949723"]]
+  [1m[35m (86.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "pythonquizzes" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["question", "1)Which of the following function of dictionary gets all the values from the dictionary?"], ["ans1", "getvalues()"], ["ans2", "value()"], ["ans3", "- values()"], ["ans4", "None of the above."], ["correctAns", 3], ["created_at", "2016-12-13 00:42:15.047958"], ["updated_at", "2016-12-13 00:42:15.047958"]]
+  [1m[36m (85.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "pythonquizzes" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["question", "2)Which of the following function convert an integer to a character in python?"], ["ans1", "set(x)"], ["ans2", "dict(d)"], ["ans3", "frozenset(s)"], ["ans4", "chr(x)"], ["correctAns", 4], ["created_at", "2016-12-13 00:42:15.136092"], ["updated_at", "2016-12-13 00:42:15.136092"]]
+  [1m[35m (67.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "pythonquizzes" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["question", "3)\tWhat is the output of print list[2:] if list = [ 'abcd', 786 , 2.23, 'john', 70.2 ]?"], ["ans1", "[ 'abcd', 786 , 2.23, 'john', 70.2 ]"], ["ans2", "abcd"], ["ans3", "[786, 2.23]"], ["ans4", "[2.23, 'john', 70.2]"], ["correctAns", 4], ["created_at", "2016-12-13 00:42:15.206649"], ["updated_at", "2016-12-13 00:42:15.206649"]]
+  [1m[36m (60.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "pythonquizzes" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["question", "4)\tWhat is the output of the following?print('{:,}'.format(1112223334))"], ["ans1", "1,112,223,334"], ["ans2", "111,222,333,4"], ["ans3", "1112223334"], ["ans4", "error"], ["correctAns", 1], ["created_at", "2016-12-13 00:42:15.270269"], ["updated_at", "2016-12-13 00:42:15.270269"]]
+  [1m[35m (74.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "pythonquizzes" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["question", "5) Which of the following creates a pattern object?"], ["ans1", "re.create(str)"], ["ans2", "re.regex(str)"], ["ans3", "re.compiler(str)"], ["ans4", "re.assemble(str)"], ["correctAns", 3], ["created_at", "2016-12-13 00:42:15.348732"], ["updated_at", "2016-12-13 00:42:15.348732"]]
+  [1m[36m (81.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-13 00:42:15.699268"], ["updated_at", "2016-12-13 00:42:15.699268"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "comments" ("title", "author", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Java Threads"], ["author", "user1@upenn.edu"], ["body", "This is very helpful"], ["created_at", "2016-12-13 00:42:15.877707"], ["updated_at", "2016-12-13 00:42:15.877707"]]
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "comment_hierarchies" ("ancestor_id", "descendant_id", "generations") VALUES (?, ?, ?)  [["ancestor_id", 1], ["descendant_id", 1], ["generations", 0]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ?  ORDER BY created_at DESC[0m  [["parent_id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-12-12 19:42:16 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 23ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-12 19:42:16 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (63.7ms)
+Completed 200 OK in 17127ms (Views: 17124.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (1.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/comments" for 127.0.0.1 at 2016-12-12 19:42:33 -0500
+Processing by CommentsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-12 19:42:33 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "comments" ("title", "author", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Java Threads"], ["author", "user1@upenn.edu"], ["body", "This is very helpful"], ["created_at", "2016-12-13 00:42:33.643647"], ["updated_at", "2016-12-13 00:42:33.643647"]]
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "comment_hierarchies" ("ancestor_id", "descendant_id", "generations") VALUES (?, ?, ?)[0m  [["ancestor_id", 1], ["descendant_id", 1], ["generations", 0]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."parent_id" = ?  ORDER BY created_at DESC  [["parent_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-13 00:42:33.653197"], ["updated_at", "2016-12-13 00:42:33.653197"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (6.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-13 00:42:33.705863"], ["updated_at", "2016-12-13 00:42:33.705863"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Python"], ["created_at", "2016-12-13 00:42:33.708871"], ["updated_at", "2016-12-13 00:42:33.708871"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-12-12 19:42:33 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-12 19:42:33 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (6.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-13 00:42:33.751485"], ["updated_at", "2016-12-13 00:42:33.751485"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Python"], ["created_at", "2016-12-13 00:42:33.755018"], ["updated_at", "2016-12-13 00:42:33.755018"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-12-12 19:42:33 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-12 19:42:33 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (4.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-13 00:42:33.797108"], ["updated_at", "2016-12-13 00:42:33.797108"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Python"], ["created_at", "2016-12-13 00:42:33.801122"], ["updated_at", "2016-12-13 00:42:33.801122"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-12-12 19:42:33 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-12 19:42:33 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (5.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-13 00:42:33.856304"], ["updated_at", "2016-12-13 00:42:33.856304"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Python"], ["created_at", "2016-12-13 00:42:33.859812"], ["updated_at", "2016-12-13 00:42:33.859812"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-12-12 19:42:33 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-12 19:42:33 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (5.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-13 00:42:33.907439"], ["updated_at", "2016-12-13 00:42:33.907439"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2016-12-12 19:42:33 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-12 19:42:33 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (6.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2016-12-12 19:42:33 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-12 19:42:33 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-13 00:42:33.967664"], ["updated_at", "2016-12-13 00:42:33.967664"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (4.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_up" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 78ms (Views: 77.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-13 00:42:34.127901"], ["updated_at", "2016-12-13 00:42:34.127901"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (4.5ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Python"], ["created_at", "2016-12-13 00:42:34.174994"], ["updated_at", "2016-12-13 00:42:34.174994"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Java"], ["created_at", "2016-12-13 00:42:34.177539"], ["updated_at", "2016-12-13 00:42:34.177539"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ruby"], ["created_at", "2016-12-13 00:42:34.179541"], ["updated_at", "2016-12-13 00:42:34.179541"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "C++"], ["created_at", "2016-12-13 00:42:34.180509"], ["updated_at", "2016-12-13 00:42:34.180509"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-13 00:42:34.183052"], ["updated_at", "2016-12-13 00:42:34.183052"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (4.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-13 00:42:34.224651"], ["updated_at", "2016-12-13 00:42:34.224651"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Python"], ["created_at", "2016-12-13 00:42:34.227658"], ["updated_at", "2016-12-13 00:42:34.227658"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (6.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-13 00:42:34.270773"], ["updated_at", "2016-12-13 00:42:34.270773"]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ruby"], ["created_at", "2016-12-13 00:42:34.273280"], ["updated_at", "2016-12-13 00:42:34.273280"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (5.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-13 00:42:34.327902"], ["updated_at", "2016-12-13 00:42:34.327902"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Python"], ["created_at", "2016-12-13 00:42:34.330909"], ["updated_at", "2016-12-13 00:42:34.330909"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (5.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-13 00:42:34.379036"], ["updated_at", "2016-12-13 00:42:34.379036"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Python"], ["created_at", "2016-12-13 00:42:34.382771"], ["updated_at", "2016-12-13 00:42:34.382771"]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (6.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-13 00:42:34.429395"], ["updated_at", "2016-12-13 00:42:34.429395"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Python"], ["created_at", "2016-12-13 00:42:34.432904"], ["updated_at", "2016-12-13 00:42:34.432904"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (5.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-13 00:42:34.518131"], ["updated_at", "2016-12-13 00:42:34.518131"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Python"], ["created_at", "2016-12-13 00:42:34.520865"], ["updated_at", "2016-12-13 00:42:34.520865"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (5.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-13 00:42:34.559006"], ["updated_at", "2016-12-13 00:42:34.559006"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Python"], ["created_at", "2016-12-13 00:42:34.561975"], ["updated_at", "2016-12-13 00:42:34.561975"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (6.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-13 00:42:34.604088"], ["updated_at", "2016-12-13 00:42:34.604088"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Python"], ["created_at", "2016-12-13 00:42:34.607095"], ["updated_at", "2016-12-13 00:42:34.607095"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (6.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-13 00:42:34.650235"], ["updated_at", "2016-12-13 00:42:34.650235"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Python"], ["created_at", "2016-12-13 00:42:34.653719"], ["updated_at", "2016-12-13 00:42:34.653719"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (4.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/comments/new" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by CommentsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.2ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-13 00:42:34.713167"], ["updated_at", "2016-12-13 00:42:34.713167"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (4.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/comments/new" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by CommentsController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2016-12-12 19:42:34 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "rss@upenn.edu"], ["encrypted_password", "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge"], ["created_at", "2016-12-13 00:42:34.755198"], ["updated_at", "2016-12-13 00:42:34.755198"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (5.0ms)[0m  [1mrollback transaction[0m
