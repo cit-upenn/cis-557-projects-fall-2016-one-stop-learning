@@ -24,10 +24,3 @@ class LanguagesController < ApplicationController
 
 end
 
-# render plain: params.inspect
-# {"utf8"=>"✓", 
-# "authenticity_token"=>"Y4GoiAf1ZtKgicRCwb
-# 6hlyd8xhmeCAdae++maw0caZwb3B/NoSNSlhnalyNpASON5Pnd
-# akkjEwueagv0NAEAiw==", "language"=>{"Langopt_id"=>"1"}, 
-# "commit"=>"Search", "method"=>"post", "controller"=>"languages", 
-# "action"=>"select"}
