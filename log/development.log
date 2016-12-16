@@ -1,0 +1,406 @@
+
+
+Started GET "/users/sign_in" for ::1 at 2016-12-16 18:30:06 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (253.0ms)
+Completed 500 Internal Server Error in 6326ms (ActiveRecord: 2.0ms)
+
+ActionView::Template::Error (Current ExecJS runtime does't support ES5. Please install node.js.):
+     8:     <link href="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/css/simple-sidebar.css" rel="stylesheet">
+     9:     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    10:     <!-- Custom CSS -->
+    11:   <%= stylesheet_link_tag "application", media: 'all', 'data-turbolinks-track' => true %>
+    12:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    13:   <%= csrf_meta_tags %>
+    14: 
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___129225489_45134544'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (993.8ms)
+
+
+Started GET "/" for ::1 at 2016-12-16 18:30:33 -0500
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-12-16 18:30:33 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.7ms)
+Completed 500 Internal Server Error in 3806ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Current ExecJS runtime does't support ES5. Please install node.js.):
+     8:     <link href="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/css/simple-sidebar.css" rel="stylesheet">
+     9:     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    10:     <!-- Custom CSS -->
+    11:   <%= stylesheet_link_tag "application", media: 'all', 'data-turbolinks-track' => true %>
+    12:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    13:   <%= csrf_meta_tags %>
+    14: 
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___129225489_45134544'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (20.1ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (803.1ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-12-16 18:32:57 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (0.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 3969ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Current ExecJS runtime does't support ES5. Please install node.js.):
+     8:     <link href="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/css/simple-sidebar.css" rel="stylesheet">
+     9:     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    10:     <!-- Custom CSS -->
+    11:   <%= stylesheet_link_tag "application", media: 'all', 'data-turbolinks-track' => true %>
+    12:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    13:   <%= csrf_meta_tags %>
+    14: 
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___129225489_45134544'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (850.3ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-12-16 18:33:34 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (61.9ms)
+Completed 500 Internal Server Error in 3935ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (Current ExecJS runtime does't support ES5. Please install node.js.):
+     8:     <link href="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/css/simple-sidebar.css" rel="stylesheet">
+     9:     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    10:     <!-- Custom CSS -->
+    11:   <%= stylesheet_link_tag "application", media: 'all', 'data-turbolinks-track' => true %>
+    12:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    13:   <%= csrf_meta_tags %>
+    14: 
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___235166689_35088756'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (692.8ms)
+
+
+Started GET "/" for ::1 at 2016-12-16 18:44:09 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 34ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-12-16 18:44:09 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (369.7ms)
+Completed 200 OK in 11940ms (Views: 11924.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-5db4021be3c40e094bad5dc8915d407547a1c47ed8a7d41b01fb325adb6e9d3d.css?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/cpp.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/cppquizzes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/favorites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/feedbacks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/java.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/javaquizzes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/langopts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/languages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/python.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/pythonquizzes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/ruby.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/rubyquizzes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started GET "/assets/application.self-0566a1bcbcfaf86e6ff6e7b1d1ba9e59472161af64496f1e2598e46b0a0b9b38.js?body=1" for ::1 at 2016-12-16 18:44:21 -0500
+
+
+Started POST "/users/sign_in" for ::1 at 2016-12-16 18:44:31 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jbzXRbtdBsDywhdvwGLcF6T1ZnVWP5KeEauluM0eiPnRadLM4wbv5xTIGKUHl+srf8Pvjy3hiHGXN+CG5JxRVw==", "user"=>{"email"=>"sahana@upenn.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "sahana@upenn.edu"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-12-02 19:02:42.013125"], ["current_sign_in_at", "2016-12-16 23:44:31.712433"], ["last_sign_in_ip", "::1"], ["sign_in_count", 17], ["updated_at", "2016-12-16 23:44:31.713405"], ["id", 1]]
+  [1m[36m (6.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?  [["user_id", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 277ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/" for ::1 at 2016-12-16 18:44:31 -0500
+Processing by LanguagesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?  [["user_id", 1]]
+  [1m[36mLangopt Load (1.0ms)[0m  [1mSELECT "langopts".* FROM "langopts"[0m
+  Rendered languages/index.html.erb within layouts/application (39.1ms)
+Completed 200 OK in 429ms (Views: 425.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/background.jpg" for ::1 at 2016-12-16 18:44:32 -0500
+
+
+Started GET "/about" for ::1 at 2016-12-16 18:44:37 -0500
+Processing by FeedbacksController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered feedbacks/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 224ms (Views: 220.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/about" for ::1 at 2016-12-16 18:46:33 -0500
+Processing by FeedbacksController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered feedbacks/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 275ms (Views: 271.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-5db4021be3c40e094bad5dc8915d407547a1c47ed8a7d41b01fb325adb6e9d3d.css?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/cpp.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/cppquizzes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/favorites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/feedbacks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/java.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/javaquizzes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/langopts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/languages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/python.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/pythonquizzes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/ruby.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/rubyquizzes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started GET "/assets/application.self-0566a1bcbcfaf86e6ff6e7b1d1ba9e59472161af64496f1e2598e46b0a0b9b38.js?body=1" for ::1 at 2016-12-16 18:46:34 -0500
+
+
+Started POST "/about?method=post" for ::1 at 2016-12-16 18:48:28 -0500
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"90bQ1hEFV5uOec4H/HvOWYVrXmar71neONdXLKoVIgmDQIzg++2hn1g3sIpwIgLYWXiE0eI6xWvoi4EWfPKjDg==", "comment"=>"Feedback from local branch.", "commit"=>"Submit", "method"=>"post"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.8ms)[0m  [1mINSERT INTO "feedbacks" ("user_id", "comment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["comment", "Feedback from local branch."], ["created_at", "2016-12-16 23:48:28.704590"], ["updated_at", "2016-12-16 23:48:28.704590"]]
+  [1m[35m (7.5ms)[0m  commit transaction
+  Rendered send_mail/sample_email.html.erb (0.0ms)
+
+SendMail#sample_email: processed outbound mail in 569.0ms
+
+Sent mail to sarveshsurana@gmail.com, sahanavp1@gmail.com, rhea1093@gmail.com (2040.2ms)
+Date: Fri, 16 Dec 2016 18:48:29 -0500
+From: pennonestoplearning@gmail.com
+To: sarveshsurana@gmail.com, 
+ sahanavp1@gmail.com, 
+ rhea1093@gmail.com
+Message-ID: <58547d4d5c865_20dc519dfd4257d@Sarvesh.mail>
+Subject: OneStopLearn Feedback
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<html>
+   
+   <head>
+      <meta content = 'text/html; charset = UTF-8' http-equiv = 'Content-Type' />
+   </head>
+   
+   <body>
+      <h1>Feedback Received</h1>
+      <h3> sahana@upenn.edu said: </h3>
+      <p>Feedback from local branch.</p>
+                 
+   </body>
+</html>
+Redirected to http://localhost:3000/about
+Completed 302 Found in 2675ms (ActiveRecord: 11.2ms)
+
+
+Started GET "/about" for ::1 at 2016-12-16 18:48:31 -0500
+Processing by FeedbacksController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?  [["user_id", 1]]
+  Rendered feedbacks/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 205ms (Views: 199.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/languages" for ::1 at 2016-12-16 18:48:59 -0500
+Processing by LanguagesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?  [["user_id", 1]]
+  [1m[36mLangopt Load (0.0ms)[0m  [1mSELECT "langopts".* FROM "langopts"[0m
+  Rendered languages/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 371ms (Views: 369.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/background.jpg" for ::1 at 2016-12-16 18:49:00 -0500
