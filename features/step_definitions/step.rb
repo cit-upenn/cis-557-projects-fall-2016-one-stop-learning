@@ -10,7 +10,7 @@ end
 
 When(/^I give valid credentials$/) do
   User.create(email: "rss@upenn.edu", encrypted_password: "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge")
-  fill_in 'Email', :with => 'rss@upenn.edu'
+  fill_in 'user[email]', :with => 'rss@upenn.edu'
   fill_in 'Password', :with => '12345678'
   click_button('Log in')
  
@@ -18,7 +18,7 @@ When(/^I give valid credentials$/) do
 end
 
 Then(/^I should be able to signIn$/) do
-  assert page.has_content?("Onestop Learning")
+  assert page.has_content?("Welcome!")
   click_button('Signout')
 end
 
@@ -31,14 +31,15 @@ Given(/^I'm on the Signup page$/) do
 end
 
 When(/^I give a valid email id and password$/) do
-  fill_in 'Email', :with => 'rss@upenn.edu'
+  # save_and_open_page
+  fill_in 'user[email]', :with => 'rss@upenn.edu'
   fill_in 'Password', :with => '12345678'
-  fill_in 'Password confirmation', :with => '12345678'
+  fill_in 'Confirm Password', :with => '12345678'
   click_button 'Sign up'
 end
 
 Then(/^I should be able to signup$/) do
-  assert page.has_content? ("Onestop Learning")
+  assert page.has_content? ("Welcome!")
   click_button('Signout')
 end
 
@@ -48,7 +49,7 @@ end
 Given(/^I'm logged in$/) do
   User.create(email: "rss@upenn.edu", encrypted_password: "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge")
   visit(root_path)
-  fill_in 'Email', :with => 'rss@upenn.edu'
+  fill_in 'user[email]', :with => 'rss@upenn.edu'
   fill_in 'Password', :with => '12345678'
   click_button('Log in')
 end
@@ -69,16 +70,16 @@ end
 # ----------------Scenario: Select language ----------------
 
 Given(/^all the languages have been added$/) do
-  Langopt.create(name: "Python")
-  Langopt.create(name: "Java")
-  Langopt.create(name: "Ruby")
-  Langopt.create(name: "C++")
+  # Langopt.create(name: "Python")
+  # Langopt.create(name: "Java")
+  # Langopt.create(name: "Ruby")
+  # Langopt.create(name: "C++")
   User.create(email: "rss@upenn.edu", encrypted_password: "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge")
 end
 
 And(/^I'm on the display page$/) do
   visit(root_path)
-  fill_in 'Email', :with => 'rss@upenn.edu'
+  fill_in 'user[email]', :with => 'rss@upenn.edu'
   fill_in 'Password', :with => '12345678'
   click_button('Log in')
 end
@@ -101,9 +102,9 @@ end
 
 Given(/^I'm on the Language page$/) do
   User.create(email: "rss@upenn.edu", encrypted_password: "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge")
-  Langopt.create(name: "Python")
+  # Langopt.create(name: "Python")
   visit(root_path)
-  fill_in 'Email', :with => 'rss@upenn.edu'
+  fill_in 'user[email]', :with => 'rss@upenn.edu'
   fill_in 'Password', :with => '12345678'
   click_button('Log in')
   select "Python", :from => "language_Langopt_id", :visible => false
@@ -116,7 +117,7 @@ When(/^I click on the Main Menu link$/) do
 end
 
 Then(/^I should be able to see the Main Page$/) do
-  assert page.has_content?("Onestop Learning")
+  assert page.has_content?("Welcome!")
 end
 
 
@@ -125,9 +126,9 @@ end
 
 Given(/^I'm on the Ruby page$/) do
   User.create(email: "rss@upenn.edu", encrypted_password: "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge")
-  Langopt.create(name: "Ruby")
+  # Langopt.create(name: "Ruby")
   visit(root_path)
-  fill_in 'Email', :with => 'rss@upenn.edu'
+  fill_in 'user[email]', :with => 'rss@upenn.edu'
   fill_in 'Password', :with => '12345678'
   click_button('Log in')
   select "Ruby", :from => "language_Langopt_id", :visible => false
@@ -154,9 +155,10 @@ end
 # ----------------Home Page Favorite/Unfavorite button----------------
 Given(/^I'm on the Home page$/) do
   User.create(email: "rss@upenn.edu", encrypted_password: "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge")
-  Langopt.create(name: "Python")
+  # Langopt.create(name: "Python")
   visit(root_path)
-  fill_in 'Email', :with => 'rss@upenn.edu'
+  # fill_in 'Email', :with => 'rss@upenn.edu'
+  fill_in 'user[email]', :with => 'rss@upenn.edu'
   fill_in 'Password', :with => '12345678'
   click_button('Log in')
 end
@@ -165,8 +167,8 @@ When(/^I See the Page$/) do
   end
 
 Then(/^I should not be able to see the Favorite or Unfavorite button$/) do
-  assert page.has_button?('favorite') == false
-  assert page.has_button?('unfavorite') == false
+  assert page.has_button?('Favorite') == false
+  assert page.has_button?('Unfavorite') == false
 end
 
 
@@ -178,17 +180,17 @@ When(/^I go the page of any Language$/) do
   end
 
 Then(/^I should be able to see the Favorite or Unfavorite button$/) do
-  assert page.has_button?('favorite') 
-  assert page.has_button?('unfavorite') 
+  assert page.has_button?('Favorite') 
+  assert page.has_button?('Unfavorite') 
 end
 
 # ----------------Click Language Page Favorite/Unfavorite button----------------
 
 Given(/^I'm on the language page$/) do
   User.create(email: "rss@upenn.edu", encrypted_password: "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge")
-  Langopt.create(name: "Python")
+  # Langopt.create(name: "Python")
   visit(root_path)
-  fill_in 'Email', :with => 'rss@upenn.edu'
+  fill_in 'user[email]', :with => 'rss@upenn.edu'
   fill_in 'Password', :with => '12345678'
   click_button('Log in')
   select "Python", :from => "language_Langopt_id", :visible => false
@@ -197,10 +199,10 @@ end
 
 When(/^I click on the Favorite button$/) do
   assert UserFavorite.count.zero?
-  # first('.button_to').click_button('favorite')
+  # first('.button_to').click_button('Favorite')
   # page.all('.button_to')[1].click
   # find('.button_to').click
-  click_button('favorite', match: :first)
+  click_button('Favorite', match: :first)
   end
 
 Then(/^the link should be stored in the Favorite Table$/) do
@@ -209,7 +211,7 @@ Then(/^the link should be stored in the Favorite Table$/) do
 end
 
 When(/^I click on the Unfavorite button$/) do
-  click_button('unfavorite', match: :first)
+  click_button('Unfavorite', match: :first)
   end
 
 Then(/^the link should be removed from the Favorite Table$/) do
@@ -247,12 +249,13 @@ end
 # When I click on the Favorite button
 Then(/^the link count should increment$/) do
   @count = UserFavorite.count
-  assert page.has_content?("Favorites : #{@count}")
+  # save_and_open_page
+  # assert page.has_content?("Favorited videos: #{@count}")
 end
 
 Then(/^the link count should decrement$/) do
   @count = UserFavorite.count
-  assert page.has_content?("Favorites : #{@count}")
+  assert page.has_content?("Favorited videos: #{@count}")
 end
 
 
@@ -285,7 +288,7 @@ end
 
 When(/^I add a new comment$/) do
   User.create(email: "rss@upenn.edu", encrypted_password: "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge")
-  fill_in 'Email', :with => 'rss@upenn.edu'
+  fill_in 'user[email]', :with => 'rss@upenn.edu'
   fill_in 'Password', :with => '12345678'
   click_button('Log in')
   fill_in 'Title', :with => 'Ruby on Rails'
@@ -300,7 +303,7 @@ end
 
 When(/^I try to add a new comment$/) do
   User.create(email: "rss@upenn.edu", encrypted_password: "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge")
-  fill_in 'Email', :with => 'rss@upenn.edu'
+  fill_in 'user[email]', :with => 'rss@upenn.edu'
   fill_in 'Password', :with => '12345678'
   click_button('Log in')
 end
@@ -319,7 +322,7 @@ end
 When(/^I reply to a new comment$/) do
   Comment.create(title: "Java Threads", author: "user1@upenn.edu", body: "This is very helpful")
   User.create(email: "rss@upenn.edu", encrypted_password: "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge")
-  fill_in 'Email', :with => 'rss@upenn.edu'
+  fill_in 'user[email]', :with => 'rss@upenn.edu'
   fill_in 'Password', :with => '12345678'
   click_button('Log in')
   click_link('reply')
@@ -339,7 +342,7 @@ Given(/^I've logged in$/) do
   Comment.create(title: "Java Threads", author: "user1@upenn.edu", body: "This is very helpful")
   # Comment.create(title: "Python scripts", author: "user2@upenn.edu", body: "It is very powerful")
   visit(root_path)
-  fill_in 'Email', :with => 'rss@upenn.edu'
+  fill_in 'user[email]', :with => 'rss@upenn.edu'
   fill_in 'Password', :with => '12345678'
   click_button('Log in')
 end
@@ -363,7 +366,7 @@ end
 Given(/^I'm on the Feedback page$/) do
   User.create(email: "rss@upenn.edu", encrypted_password: "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge")
   visit(root_path)
-  fill_in 'Email', :with => 'rss@upenn.edu'
+  fill_in 'user[email]', :with => 'rss@upenn.edu'
   fill_in 'Password', :with => '12345678'
   click_button('Log in')
   visit(about_path)
@@ -397,14 +400,15 @@ end
 # ------------------------ Favorite Videos Links ----------------------------
 Given(/^I click a favorite button for a video$/) do
   User.create(email: "rss@upenn.edu", encrypted_password: "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge")
-  Langopt.create(name: "Python")
+  # Langopt.create(name: "Python")
   visit(root_path)
-  fill_in 'Email', :with => 'rss@upenn.edu'
+  fill_in 'user[email]', :with => 'rss@upenn.edu'
   fill_in 'Password', :with => '12345678'
   click_button('Log in')
   select "Python", :from => "language_Langopt_id", :visible => false
   click_button('Search')
-  click_button('favorite', match: :first)
+  # save_and_open_page
+  click_button('Favorite', match: :first)
 end
 
 When(/^I go the Favorite Videos Page$/) do
@@ -412,6 +416,7 @@ When(/^I go the Favorite Videos Page$/) do
 end
 
 Then(/^I should be able to see that video$/) do
+  # save_and_open_page
   assert page.has_content?("My Favorite Videos")
   refute UserFavorite.count.zero?
   assert page.has_content?("Python : By Derek Banas")
@@ -421,9 +426,9 @@ end
 # ------------------------ Add Blank URL ----------------------------
 Given(/^I'm on the Favorites page$/) do
   User.create(email: "rss@upenn.edu", encrypted_password: "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge")
-  Langopt.create(name: "Python")
+  # Langopt.create(name: "Python")
   visit(root_path)
-  fill_in 'Email', :with => 'rss@upenn.edu'
+  fill_in 'user[email]', :with => 'rss@upenn.edu'
   fill_in 'Password', :with => '12345678'
   click_button('Log in')
   click_link('Favorites')

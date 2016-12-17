@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Onestop</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/css/simple-sidebar.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <!-- Custom CSS -->
+  <link rel="stylesheet" media="all" href="/assets/application-9afc1494d78acc26059eca31de9660446deff095bff4beb54642b15e44da82be.css" data-turbolinks-track="true" />
+  <script src="/assets/application-57f98a6f4d7f6dc621cf3e88245f5e8a8691a1ad0dc257074569274df5a6f76c.js" data-turbolinks-track="true"></script>
+  
+
+  <style type="text/css">
+
+    body{
+      background-color: #EEEEEE;
+    }
+    
+    body.bk{
+      background-image: url('assets/background.jpg');
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+
+    #back_ground{
+      background-image: url('http://i1.wallpaperscraft.com/image/computer_keyboard_mouse_laptop_mac_apple_66734_1920x1080.jpg');
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+
+    #page-content-wrapper{
+      margin-top: -50px;
+    }
+
+    #sidebar-wrapper{
+       margin-top: 100px;
+       color: #6C7477;
+       padding: 7px;
+    }
+       
+    .fav_unfav{
+      float:left;
+      padding-right: 10px;
+    }
+
+    .links{
+      padding: 7px;
+    }
+    .fav_buttons{
+      white-space: nowrap;
+    }
+    .navbar-btn{
+      margin: 10px;
+    }
+
+    #fav_buttons{
+      padding: 10px;
+      margin: 10px;
+    }
+
+    .footer{
+      position: fixed;
+      bottom: 0;
+    }
+
+    .heading{
+      padding: 10px;
+    }
+
+    .field{
+      padding: 10px;
+    }
+
+    .wrapper{
+
+    }
+    .welcome-page{
+      margin-top: 100px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="wrapper">
+<!-- Page Content -->
+  <div id="page-content-wrapper">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-lg-12 welcome-page">
+                 
+                  <body id='back_ground'>
+  <h1>OneStop Learning</h1>
+  <h2>Sign up</h2>
+
+  <form class="new_user" id="new_user" action="/users" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" />
+    
+
+    <div class='row'>
+    <div class="field col-xs-3">
+      <label for="user_email">Email</label><br />
+      <input autofocus="autofocus" id="inputEmail" class="form-control" placeholder="Email address" type="email" value="" name="user[email]" />
+    </div>
+  </div>
+
+  <div class='row'>
+   <div class="field col-xs-3">
+      <label for="user_password">Password</label>
+<br />
+      <input autocomplete="off" id="inputPassword" class="form-control" placeholder="Password" type="password" name="user[password]" />
+    </div>
+  </div>
+   
+
+  <div class='row'>
+   <div class="field col-xs-3">
+      <label for="user_password_confirmation">Password confirmation</label><br />
+      <input autocomplete="off" id="confirmPassword" class="form-control" placeholder="Confirm Password" type="password" name="user[password_confirmation]" />
+    </div>
+  </div>
+   
+
+    <div class="actions">
+      <input type="submit" name="commit" value="Sign up" class="btn btn-primary btn-signin" />
+    </div>
+</form>
+  <div class='links'>
+      <a href="/users/sign_in">Log in</a><br />
+
+
+
+
+
+    <a href="/users/auth/facebook">Sign in with Facebook</a><br />
+
+  </div>
+</body>
+
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+</div>
+
+</body>
+</html>

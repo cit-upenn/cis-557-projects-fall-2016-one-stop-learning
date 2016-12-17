@@ -404,3 +404,418 @@ Completed 200 OK in 371ms (Views: 369.6ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/assets/background.jpg" for ::1 at 2016-12-16 18:49:00 -0500
+
+
+Started GET "/languages" for ::1 at 2016-12-16 19:22:44 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LanguagesController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mLangopt Load (0.0ms)[0m  SELECT "langopts".* FROM "langopts"
+  Rendered languages/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 670ms (Views: 628.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-5db4021be3c40e094bad5dc8915d407547a1c47ed8a7d41b01fb325adb6e9d3d.css?body=1" for ::1 at 2016-12-16 19:22:45 -0500
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2016-12-16 19:22:45 -0500
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2016-12-16 19:22:45 -0500
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-12-16 19:22:45 -0500
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for ::1 at 2016-12-16 19:22:45 -0500
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for ::1 at 2016-12-16 19:22:45 -0500
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/bootstrap.self-fdc98dee79ee88255e10cac6caa91338165cb76cf0d263744d8d90011fc2ef8f.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/cpp.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/cppquizzes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/favorites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/feedbacks.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/java.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/javaquizzes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/langopts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/languages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/python.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/pythonquizzes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/ruby.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/rubyquizzes.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/application.self-0566a1bcbcfaf86e6ff6e7b1d1ba9e59472161af64496f1e2598e46b0a0b9b38.js?body=1" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/assets/background.jpg" for ::1 at 2016-12-16 19:22:46 -0500
+
+
+Started GET "/" for ::1 at 2016-12-17 16:17:51 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by LanguagesController#index as HTML
+Completed 401 Unauthorized in 42ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-12-17 16:17:51 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (62.2ms)
+Completed 200 OK in 1587ms (Views: 1566.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-12-17 16:43:12 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rkmCNPz1HD3h8ZaK2njsRv+TcIzOdkCk83jlQIj1pullHQ+BR1p6h0Z+Uo+Oh0k0ZvIDJKjmUcqeErLNnwZzHA==", "user"=>{"email"=>"sahana@upenn.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "sahana@upenn.edu"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-12-16 23:44:31.712433"], ["current_sign_in_at", "2016-12-17 21:43:12.720608"], ["sign_in_count", 18], ["updated_at", "2016-12-17 21:43:12.722614"], ["id", 1]]
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?  [["user_id", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 209ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/" for ::1 at 2016-12-17 16:43:12 -0500
+Processing by LanguagesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?  [["user_id", 1]]
+  [1m[36mLangopt Load (0.0ms)[0m  [1mSELECT "langopts".* FROM "langopts"[0m
+  Rendered languages/index.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 258ms (Views: 252.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/background.jpg" for ::1 at 2016-12-17 16:43:13 -0500
+
+
+Started POST "/languages?method=post" for ::1 at 2016-12-17 16:54:22 -0500
+Processing by LanguagesController#select as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"II+k7TD3DjinnnLXJfqa8x/lmGWqQkf/2GQN3ozCLU52qcaX/xGp1twh+/Ev/CUpx5SMND9Fur6ckXnLaA01Gw==", "language"=>{"Langopt_id"=>"1"}, "commit"=>"Search", "method"=>"post"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?[0m  [["user_id", 1]]
+Redirected to http://localhost:3000/languages/python
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/languages/python" for ::1 at 2016-12-17 16:54:22 -0500
+Processing by PythonController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mFavorite Load (1.0ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."language" = ?  [["language", "Python"]]
+  Rendered python/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 430ms (Views: 424.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/languages" for ::1 at 2016-12-17 16:54:25 -0500
+Processing by LanguagesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?  [["user_id", 1]]
+  [1m[36mLangopt Load (0.0ms)[0m  [1mSELECT "langopts".* FROM "langopts"[0m
+  Rendered languages/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 178ms (Views: 176.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/languages/assets/background.jpg" for ::1 at 2016-12-17 16:54:26 -0500
+
+ActionController::RoutingError (No route matches [GET] "/languages/assets/background.jpg"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1002.7ms)
+
+
+Started POST "/languages?method=post" for ::1 at 2016-12-17 16:54:29 -0500
+Processing by LanguagesController#select as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5ZMdebWmMFLms9PtU1hT2wRAl0Mw3FZjW/Ik3NSrk+KztX8DekCXvJ0MWstZXuwB3DGDEqXbqyIfB1DJMGSLtw==", "language"=>{"Langopt_id"=>"2"}, "commit"=>"Search", "method"=>"post"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?[0m  [["user_id", 1]]
+Redirected to http://localhost:3000/languages/ruby
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/languages/ruby" for ::1 at 2016-12-17 16:54:29 -0500
+Processing by RubyController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mFavorite Load (1.0ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."language" = ?  [["language", "Ruby"]]
+  Rendered ruby/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 360ms (Views: 300.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/languages" for ::1 at 2016-12-17 16:54:31 -0500
+Processing by LanguagesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "user_favorites" WHERE "user_favorites"."user_id" = ?  [["user_id", 1]]
+  [1m[36mLangopt Load (0.0ms)[0m  [1mSELECT "langopts".* FROM "langopts"[0m
+  Rendered languages/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 170ms (Views: 168.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/languages/assets/background.jpg" for ::1 at 2016-12-17 16:54:32 -0500
+
+ActionController::RoutingError (No route matches [GET] "/languages/assets/background.jpg"):
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.7.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.7.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.7.1) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.7.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.7.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1084.9ms)
+  [1m[36mLangopt Load (3.0ms)[0m  [1mSELECT "langopts".* FROM "langopts"[0m
+  [1m[35mLangopt Load (0.0ms)[0m  SELECT "langopts".* FROM "langopts"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (15.6ms)[0m  DELETE FROM "langopts" WHERE "langopts"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "langopts" WHERE "langopts"."id" = ?[0m  [["id", 2]]
+  [1m[35m (15.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "langopts" WHERE "langopts"."id" = ?  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "langopts" WHERE "langopts"."id" = ?[0m  [["id", 4]]
+  [1m[35m (15.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "langopts" WHERE "langopts"."id" = ?  [["id", 6]]
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "langopts" WHERE "langopts"."id" = ?[0m  [["id", 7]]
+  [1m[35m (15.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "langopts" WHERE "langopts"."id" = ?  [["id", 8]]
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "langopts" WHERE "langopts"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mLangopt Load (0.0ms)[0m  [1mSELECT "langopts".* FROM "langopts"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mFavorite Load (0.0ms)[0m  SELECT "favorites".* FROM "favorites"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "favorites" WHERE "favorites"."id" = ?  [["id", 13]]
+  [1m[36m (15.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 14]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "favorites" WHERE "favorites"."id" = ?  [["id", 15]]
+  [1m[36m (15.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 16]]
+  [1m[35m (15.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "favorites" WHERE "favorites"."id" = ?  [["id", 17]]
+  [1m[36m (15.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 18]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "favorites" WHERE "favorites"."id" = ?  [["id", 19]]
+  [1m[36m (15.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 20]]
+  [1m[35m (15.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "favorites" WHERE "favorites"."id" = ?  [["id", 21]]
+  [1m[36m (15.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 22]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "favorites" WHERE "favorites"."id" = ?  [["id", 23]]
+  [1m[36m (31.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "favorites" WHERE "favorites"."id" = ?[0m  [["id", 24]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36mLangopt Load (0.0ms)[0m  [1mSELECT "langopts".* FROM "langopts"[0m
+  [1m[35mPythonquiz Load (0.0ms)[0m  SELECT "pythonquizzes".* FROM "pythonquizzes"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "pythonquizzes" WHERE "pythonquizzes"."id" = ?  [["id", 1]]
+  [1m[36m (15.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mDELETE FROM "pythonquizzes" WHERE "pythonquizzes"."id" = ?[0m  [["id", 2]]
+  [1m[35m (15.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "pythonquizzes" WHERE "pythonquizzes"."id" = ?  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (15.6ms)[0m  [1mDELETE FROM "pythonquizzes" WHERE "pythonquizzes"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  DELETE FROM "pythonquizzes" WHERE "pythonquizzes"."id" = ?  [["id", 5]]
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["url", "https://www.youtube.com/embed/N4mEzFDjqtA?controls=1"], ["description", "This\nvideo covers modules, comments, print, arithmetic operators, order of\noperation, lists, tuples, dictionaries, conditional operators, logical\noperators, if, else, elif, loops, for, while, break, continue, functions,\nreturn, readline(), string operators, file i/o, classes, objects and much\nmore."], ["language", "Python"], ["owner", "Derek Banas"], ["created_at", "2016-12-17 21:58:35.582734"], ["updated_at", "2016-12-17 21:58:35.582734"]]
+  [1m[35m (15.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["url", "https://www.youtube.com/embed/cpPG0bKHYKc?controls=1"], ["description", "This Python Programming Tutorial covers the instillation python and\nsetting up the python development environment. This video covers\nsetting up a system variable for using python from the windows command\nprompt and also covers using python from the built in IDLE IDE. After\nsetting up the development an environment this video demonstrates how\nto create and run your first python script (Hello World).This video\nseries is ideal for individuals looking to learn their\nfirst programming language or individuals looking to learn python\nas another programming language."], ["language", "Python"], ["owner", "onestopprogramming"], ["created_at", "2016-12-17 21:58:35.598393"], ["updated_at", "2016-12-17 21:58:35.598393"]]
+  [1m[36m (15.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["url", "https://www.youtube.com/embed/4Mf0h3HphEA?controls=1"], ["description", "This series assumes zero prior knowledge of programming and will\nleave you with a firm grasp of the language. The instructor strikes a really\ngreat balance between being funny while also being easy to listen."], ["language", "Python"], ["owner", "thenewboston"], ["created_at", "2016-12-17 21:58:35.613988"], ["updated_at", "2016-12-17 21:58:35.613988"]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["url", "https://www.youtube.com/embed/Dji9ALCgfpM?controls=1"], ["description", "This video is a perfect revision lecture and covers most of the\nfundamentals. The length and the pacing of information  mades it really good\nas a preview."], ["language", "Ruby"], ["owner", "Derek Banas"], ["created_at", "2016-12-17 21:58:35.613988"], ["updated_at", "2016-12-17 21:58:35.613988"]]
+  [1m[36m (15.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["url", "https://www.youtube.com/embed/8I539U5lXWY?controls=1"], ["description", "This video series is ideal for beginners and covers all the\nbasic concepts in-depth."], ["language", "Ruby"], ["owner", "Jake Day Williams"], ["created_at", "2016-12-17 21:58:35.629613"], ["updated_at", "2016-12-17 21:58:35.629613"]]
+  [1m[35m (15.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["url", "https://www.youtube.com/embed/Dji9ALCgfpM?controls=1"], ["description", "Good tutorial for the freshers. Every concept is explained very\nclearly and even a viewer who doesn't know anything about coding can also\nunderstand it easily."], ["language", "Ruby"], ["owner", "Smartherd"], ["created_at", "2016-12-17 21:58:35.645273"], ["updated_at", "2016-12-17 21:58:35.645273"]]
+  [1m[36m (15.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["url", "https://www.youtube.com/embed/Rub-JsjMhWY?controls=1"], ["description", "This video is a great refresher course and covers datatypes,\narithmetic operations, if statement, switch statement, ternary operator,\narrays, for loop, while loop, do while loop, how to obtain user input,\nstrings, vectors, functions, recursive functions, exception handling,\npointers, reference operator, classes / objects, static variables and\nfunctions, constructors, inheritance, virtual methods, polymorphism and\nabstract data type."], ["language", "C++"], ["owner", "Derek Banas"], ["created_at", "2016-12-17 21:58:35.660899"], ["updated_at", "2016-12-17 21:58:35.660899"]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["url", "https://www.youtube.com/embed/S3t-5UtvDN0?controls=1"], ["description", "This video series is ideal for beginners looking to learn C++ as\nit assumes zero prior knowledge of programming."], ["language", "C++"], ["owner", "Programming Tutorials"], ["created_at", "2016-12-17 21:58:35.660899"], ["updated_at", "2016-12-17 21:58:35.660899"]]
+  [1m[36m (15.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["url", "https://www.youtube.com/embed/-WwGMNGRHdw?controls=1"], ["description", "This series covers the fundamentals of C++. Has great content\nand goes at an appropriate pace such that all the views irrespective of their\nbackground can follow it easily."], ["language", "C++"], ["owner", "Anurag Verma"], ["created_at", "2016-12-17 21:58:35.676493"], ["updated_at", "2016-12-17 21:58:35.676493"]]
+  [1m[35m (15.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["url", "https://www.youtube.com/embed/WPvGqX-TXP0?controls=1"], ["description", "This Java programming Tutorial teachs you all of the core\nknowledge needed to write Java code in 30 minutes. It specifically covers the\nfollowing topics: primitive data types, comments, class, import, Scanner,\nfinal, Strings, static, private, protected, public, constructors, math,\nhasNextLine, nextLine, getters, setters, method overloading, Random, casting,\ntoString, conversion from Strings to primitives, converting from primitives to\nStrings, if, else, else if, print, println, printf, logical operators,\ncomparison operators, ternary operator, switch, for, while, break, continue,\ndo while, polymorphism, arrays, for each, multidimensional arrays and more."], ["language", "Java"], ["owner", "Derek Banas"], ["created_at", "2016-12-17 21:58:35.692123"], ["updated_at", "2016-12-17 21:58:35.692123"]]
+  [1m[36m (15.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["url", "https://www.youtube.com/embed/Cfd9DOnuF9w?controls=1"], ["description", "This series covers the basic concepts of Java. The instructor\nprovides great explanation and makes the concepts easy to follow and\nunderstand."], ["language", "Java"], ["owner", "Software Tutorials"], ["created_at", "2016-12-17 21:58:35.707746"], ["updated_at", "2016-12-17 21:58:35.707746"]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (15.6ms)[0m  INSERT INTO "favorites" ("url", "description", "language", "owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["url", "https://www.youtube.com/embed/RGcDksxiyJo?controls=1"], ["description", "This video aims at teaching Java to absolute beginners. The\nexplanations and images combined make up a great tutorial."], ["language", "Java"], ["owner", "WEB Technology"], ["created_at", "2016-12-17 21:58:35.707746"], ["updated_at", "2016-12-17 21:58:35.707746"]]
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Python"], ["created_at", "2016-12-17 21:58:35.739002"], ["updated_at", "2016-12-17 21:58:35.739002"]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Java"], ["created_at", "2016-12-17 21:58:35.739002"], ["updated_at", "2016-12-17 21:58:35.739002"]]
+  [1m[36m (15.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ruby"], ["created_at", "2016-12-17 21:58:35.754626"], ["updated_at", "2016-12-17 21:58:35.754626"]]
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "langopts" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "C++"], ["created_at", "2016-12-17 21:58:35.754626"], ["updated_at", "2016-12-17 21:58:35.754626"]]
+  [1m[36m (15.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "pythonquizzes" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["question", "1)Which of the following function of dictionary gets all the values from the dictionary?"], ["ans1", "getvalues()"], ["ans2", "value()"], ["ans3", "- values()"], ["ans4", "None of the above."], ["correctAns", 3], ["created_at", "2016-12-17 21:58:35.770287"], ["updated_at", "2016-12-17 21:58:35.770287"]]
+  [1m[35m (15.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "pythonquizzes" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["question", "2)Which of the following function convert an integer to a character in python?"], ["ans1", "set(x)"], ["ans2", "dict(d)"], ["ans3", "frozenset(s)"], ["ans4", "chr(x)"], ["correctAns", 4], ["created_at", "2016-12-17 21:58:35.785880"], ["updated_at", "2016-12-17 21:58:35.785880"]]
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "pythonquizzes" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["question", "3)\tWhat is the output of print list[2:] if list = [ 'abcd', 786 , 2.23, 'john', 70.2 ]?"], ["ans1", "[ 'abcd', 786 , 2.23, 'john', 70.2 ]"], ["ans2", "abcd"], ["ans3", "[786, 2.23]"], ["ans4", "[2.23, 'john', 70.2]"], ["correctAns", 4], ["created_at", "2016-12-17 21:58:35.785880"], ["updated_at", "2016-12-17 21:58:35.785880"]]
+  [1m[35m (31.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "pythonquizzes" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["question", "4)\tWhat is the output of the following?print('{:,}'.format(1112223334))"], ["ans1", "1,112,223,334"], ["ans2", "111,222,333,4"], ["ans3", "1112223334"], ["ans4", "error"], ["correctAns", 1], ["created_at", "2016-12-17 21:58:35.817135"], ["updated_at", "2016-12-17 21:58:35.817135"]]
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "pythonquizzes" ("question", "ans1", "ans2", "ans3", "ans4", "correctAns", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["question", "5) Which of the following creates a pattern object?"], ["ans1", "re.create(str)"], ["ans2", "re.regex(str)"], ["ans3", "re.compiler(str)"], ["ans4", "re.assemble(str)"], ["correctAns", 3], ["created_at", "2016-12-17 21:58:35.817135"], ["updated_at", "2016-12-17 21:58:35.817135"]]
+  [1m[35m (15.6ms)[0m  commit transaction
