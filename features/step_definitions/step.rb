@@ -442,7 +442,6 @@ Then(/^I should be able to see the error notice\.$/) do
   assert page.has_content?("Please enter a valid link.")
 end
 
-# ------------------------ Add Blank URL ----------------------------
 When(/^I the enter the URL information$/) do
   assert UserFavorite.count.zero?
   fill_in 'url', :with => 'https://www.youtube.com/watch?v=0yW7w8F2TVA'
@@ -453,4 +452,30 @@ end
 Then(/^I should be able to see that video in the list\.$/) do
   refute UserFavorite.count.zero?
   assert page.has_content?("Test : By rss@upenn.edu")
+end
+
+
+# ------------------------ Open quiz page. ----------------------------
+When(/^I click on the quiz button$/) do
+  click_link('Quiz')
+end
+
+Then(/^I should be able to see the quiz page.$/) do
+  assert page.has_content?("Quiz on Python")
+end
+
+# ------------------------ Enter the answer number ----------------------------
+Given(/^I'm on the Quiz Page$/) do
+  visit(root_path)
+  select "Python", :from => "language_Langopt_id", :visible => false
+  click_button('Search')
+  click_link('Quiz')
+end
+
+When(/^I click on the check$/) do
+  click_button('Check', match: :first)
+end
+
+Then(/^I should be able to see if the answer is correct or wrong$/) do
+  assert page.has_content?("Wrong Answer")
 end
