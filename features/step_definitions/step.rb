@@ -466,7 +466,11 @@ end
 
 # ------------------------ Enter the answer number ----------------------------
 Given(/^I'm on the Quiz Page$/) do
+  User.create(email: "rss@upenn.edu", encrypted_password: "$2a$10$73H9vhOZVcojMINs7NeOW.wSrj48S0kukb./dIbxZnuNQj5U8O9ge")
   visit(root_path)
+  fill_in 'user[email]', :with => 'rss@upenn.edu'
+  fill_in 'Password', :with => '12345678'
+  click_button('Log in')
   select "Python", :from => "language_Langopt_id", :visible => false
   click_button('Search')
   click_link('Quiz')
