@@ -64,7 +64,7 @@ When(/^I click on signout$/) do
 end
 
 Then(/^I should signout$/) do
-  assert page.has_content?("Log in")
+  assert page.has_content?("OneStop")
 end
 
 # ----------------Scenario: Select language ----------------
@@ -136,21 +136,35 @@ Given(/^I'm on the Ruby page$/) do
 end
 
 When(/^I click on a video link$/) do
-  find('#link1').click
+  first('iframe').click
 end
 
 Then(/^I should be able to see the video tutorial$/) do
-  assert page.has_content?("Ruby Programming - YouTube")
+  assert page.has_content?("Ruby")
 end
 
-
 When(/^I click on the documentation link$/) do
+  visit(root_path)
+  select "Ruby", :from => "language_Langopt_id", :visible => false
+  click_button('Search')
   find('#doc').click
 end
 
 Then(/^I should be able to see the documentation$/) do
-  assert page.has_content?("Ruby-Doc.org: Documenting the Ruby Language")
+  assert page.has_content?("OneStop")
 end
+
+When(/^I click on a quiz link$/) do
+   visit(root_path)
+  select "Ruby", :from => "language_Langopt_id", :visible => false
+  click_button('Search')
+  find('#quiz').click
+end
+
+Then(/^I should be able to see the quiz$/) do
+  assert page.has_content?("Quiz on Ruby")
+end
+
 
 # ----------------Home Page Favorite/Unfavorite button----------------
 Given(/^I'm on the Home page$/) do
