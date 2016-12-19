@@ -442,6 +442,8 @@ Then(/^I should be able to see the error notice\.$/) do
   assert page.has_content?("Please enter a valid link.")
 end
 
+# ------------------------ Add personal Favorite Videos Links ----------------------------
+
 When(/^I the enter the URL information$/) do
   assert UserFavorite.count.zero?
   fill_in 'url', :with => 'https://www.youtube.com/watch?v=0yW7w8F2TVA'
