@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Onestop</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://blackrockdigital.github.io/startbootstrap-simple-sidebar/css/simple-sidebar.css" rel="stylesheet">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <!-- Custom CSS -->
+  <link rel="stylesheet" media="all" href="/assets/application-9afc1494d78acc26059eca31de9660446deff095bff4beb54642b15e44da82be.css" data-turbolinks-track="true" />
+  <script src="/assets/application-57f98a6f4d7f6dc621cf3e88245f5e8a8691a1ad0dc257074569274df5a6f76c.js" data-turbolinks-track="true"></script>
+  
+
+  <style type="text/css">
+
+    body{
+      background-color: #EEEEEE;
+    }
+    
+    body.bk{
+      background-image: url('assets/background.jpg');
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+
+    #back_ground{
+      background-image: url('http://i1.wallpaperscraft.com/image/computer_keyboard_mouse_laptop_mac_apple_66734_1920x1080.jpg');
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+
+    #page-content-wrapper{
+      margin-top: -50px;
+    }
+
+    #sidebar-wrapper{
+       margin-top: 100px;
+       color: #6C7477;
+       padding: 7px;
+    }
+       
+    .fav_unfav{
+      float:left;
+      padding-right: 10px;
+    }
+
+    .links{
+      padding: 7px;
+    }
+    .fav_buttons{
+      white-space: nowrap;
+    }
+    .navbar-btn{
+      margin: 10px;
+    }
+
+    #fav_buttons{
+      padding: 10px;
+      margin: 10px;
+    }
+
+    .footer{
+      position: fixed;
+      bottom: 0;
+    }
+
+    .heading{
+      padding: 10px;
+    }
+
+    .field{
+      padding: 10px;
+    }
+
+    .wrapper{
+
+    }
+    .welcome-page{
+      margin-top: 100px;
+    }
+
+  </style>
+</head>
+<body>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+           <div class="navbar-header">
+                <a class="navbar-brand">OneStop Learning</a>
+            </div>
+          <ul class="nav navbar-nav">
+            <li><a href="/languages">Main Menu</a></li>
+            <li><a href="/languages/favorite">Favorites</a></li>
+            <li><a href="/comments">Discussions</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+          
+          <ul class="nav navbar-nav navbar-right">
+            <li class="navbar-text">rss@upenn.edu</li>
+            <li><form class="button_to" method="post" action="/users/sign_out"><input type="hidden" name="_method" value="delete" /><input class="btn navbar-btn" type="submit" value="Signout" /></form></li>
+          </ul>
+        </div>
+      </nav>
+        <!-- Sidebar --> 
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                      <div>
+                        <h4 class="heading">Favorited videos: 1</h4>
+                        <ul class="nav nav-list">
+                              <li>  
+                              <span>
+                              Ruby : 
+                              <a href = https://www.youtube.com/embed/Dji9ALCgfpM?controls=1 > Derek Banas </a>
+                              </span>
+                              </li>
+                        </ul>
+                         <li class="footer"><p>&copy; OneStopLearn 2016</p></li>
+                      </div> 
+            </ul>
+        </div>
+    
+
+  <div id="wrapper">
+<!-- Page Content -->
+  <div id="page-content-wrapper">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-lg-12 welcome-page">
+                 
+                  <!DOCTYPE html>
+<head>
+  <title>Ruby</title>
+</head>
+<body>
+ 
+  <div class = "text-center">
+    <h2>Ruby</h2>
+  </div>
+  <h3>Video Tutorials</h3>
+  <ul>
+        <li> <h4>By Derek Banas</h4>
+        <div id="fav_buttons">
+          <span class="fav_unfav"><form class="button_to" method="post" action="/languages/ruby?lang=Ruby&amp;owner=Derek+Banas&amp;type=favorite&amp;url=https%3A%2F%2Fwww.youtube.com%2Fembed%2FDji9ALCgfpM%3Fcontrols%3D1"><input class="btn btn-primary" type="submit" value="Favorite" /></form></span>
+          <span class="fav_unfav"><form class="button_to" method="post" action="/languages/ruby?lang=Ruby&amp;owner=Derek+Banas&amp;type=unfavorite&amp;url=https%3A%2F%2Fwww.youtube.com%2Fembed%2FDji9ALCgfpM%3Fcontrols%3D1"><input class="btn" type="submit" value="Unfavorite" /></form></span>
+        </div><br>
+        <iframe width="520" height="285" allowfullscreen="allowfullscreen" 
+          src= https://www.youtube.com/embed/Dji9ALCgfpM?controls=1 >
+        </iframe>
+        <p><b>Description</b></p>
+        <p>This video is a perfect revision lecture and covers most of the
+fundamentals. The length and the pacing of information  mades it really good
+as a preview.</p><br><br>
+      </li>
+        <li> <h4>By Jake Day Williams</h4>
+        <div id="fav_buttons">
+          <span class="fav_unfav"><form class="button_to" method="post" action="/languages/ruby?lang=Ruby&amp;owner=Jake+Day+Williams&amp;type=favorite&amp;url=https%3A%2F%2Fwww.youtube.com%2Fembed%2F8I539U5lXWY%3Fcontrols%3D1"><input class="btn btn-primary" type="submit" value="Favorite" /></form></span>
+          <span class="fav_unfav"><form class="button_to" method="post" action="/languages/ruby?lang=Ruby&amp;owner=Jake+Day+Williams&amp;type=unfavorite&amp;url=https%3A%2F%2Fwww.youtube.com%2Fembed%2F8I539U5lXWY%3Fcontrols%3D1"><input class="btn" type="submit" value="Unfavorite" /></form></span>
+        </div><br>
+        <iframe width="520" height="285" allowfullscreen="allowfullscreen" 
+          src= https://www.youtube.com/embed/8I539U5lXWY?controls=1 >
+        </iframe>
+        <p><b>Description</b></p>
+        <p>This video series is ideal for beginners and covers all the
+basic concepts in-depth.</p><br><br>
+      </li>
+        <li> <h4>By Smartherd</h4>
+        <div id="fav_buttons">
+          <span class="fav_unfav"><form class="button_to" method="post" action="/languages/ruby?lang=Ruby&amp;owner=Smartherd&amp;type=favorite&amp;url=https%3A%2F%2Fwww.youtube.com%2Fembed%2FDji9ALCgfpM%3Fcontrols%3D1"><input class="btn btn-primary" type="submit" value="Favorite" /></form></span>
+          <span class="fav_unfav"><form class="button_to" method="post" action="/languages/ruby?lang=Ruby&amp;owner=Smartherd&amp;type=unfavorite&amp;url=https%3A%2F%2Fwww.youtube.com%2Fembed%2FDji9ALCgfpM%3Fcontrols%3D1"><input class="btn" type="submit" value="Unfavorite" /></form></span>
+        </div><br>
+        <iframe width="520" height="285" allowfullscreen="allowfullscreen" 
+          src= https://www.youtube.com/embed/Dji9ALCgfpM?controls=1 >
+        </iframe>
+        <p><b>Description</b></p>
+        <p>Good tutorial for the freshers. Every concept is explained very
+clearly and even a viewer who doesn&#39;t know anything about coding can also
+understand it easily.</p><br><br>
+      </li>
+  </ul>
+  <h3>Official Documentation</h3>
+    <a role='button' class='btn btn-primary' href = "http://ruby-doc.org/">Documentation</a> <br>
+  <h3>Read More</h3>
+    <a role='button' class='btn btn-primary' href = "http://www.rubyflow.com/">Blog</a> <br>
+  <h3>Test your knowledge</h3>
+  <a role="button" class="btn btn-primary" href="/rubyquizzes/answering?id=1">Quiz</a>
+
+</body>
+
+
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+</div>
+
+</body>
+</html>

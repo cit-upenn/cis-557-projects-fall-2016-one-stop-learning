@@ -120,6 +120,7 @@ Javaquiz.create(question: "3) What are Wrapper classes?" ,ans1:" These are class
 Javaquiz.create(question: "4) When does finally block get executed?" ,ans1:" Always when try block gets executed, no matter exception occured or not",ans2:" Always when a method gets executed, no matter exception occured or not",ans3:" Always when a try block gets executed, if exception do not occur",ans4:" Only when exception occurs in try block code",correctAns:"1")
 Javaquiz.create(question: "5) Which of the following is not a keyword in java?" ,ans1:" static",ans2:" Boolean",ans3:" void",ans4:" private",correctAns:"2")
 
+
 Rubyquiz.create(question: "1) Which of the expressions listed below will result in \"false\"?", ans1:" nil ? \"true\" : \"false\"", ans2: " 1 ? \"true\" : \"false\"", ans3: " \“\” ? \"true\" : \"false\"", ans4: " [] ? \"true\" : \"false\"", correctAns: "1" )
 Rubyquiz.create(question: "2) Which of the following cannot be used to print a statement in Ruby?", ans1:" p", ans2: " puts", ans3: " out", ans4: " print", correctAns: "3" )
 Rubyquiz.create(question: "3) Which of the following statements is false?", ans1:" The library functions in Ruby are called gems", ans2: " Every line which is executed in Ruby returns something", ans3: " Ruby has auto-memory management and garbage collections", ans4: " Indentation is required", correctAns: "4" )
@@ -131,7 +132,3 @@ Cppquiz.create(question: "2) Which of the following statements is correct?", ans
 Cppquiz.create(question: "3) Which of the following concepts means determining at runtime what method to invoke?", ans1:" Data hiding", ans2: " Dynamic Typing", ans3: " Dynamic binding", ans4: " Dynamic loading", correctAns: "3" )
 Cppquiz.create(question: "4) How does the strings are stored in the memory?", ans1:" Contiguous", ans2: " Non-contiguous", ans3: " Null", ans4: " All of the mentioned", correctAns: "1" )
 Cppquiz.create(question: "5) Which of the following concept of oops allows compiler to insert arguments in a function call if it is not specified?", ans1:" Call by value", ans2: " Call by reference", ans3: " Default arguments", ans4: " Call by pointer", correctAns: "3" )
-
-
-
-
